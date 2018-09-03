@@ -8,9 +8,13 @@ Necessary Software:
 * mongodb 3.6.x
 * sbt 1.2.x
 
-## Important ##git add .
+## Important ##
 
 In build.sbt a library dependence is add to satisfy the spark inclusion in sbt, 
 but, if you have the spark version 2.3.1, you'd must set into dependence :
 libraryDependencies += "org.apache.spark" %% "spark-core" % "2.3.0"
  
+ 
+### SERVICE NOTE ###
+Use this link for dependency
+https://mvnrepository.com/
