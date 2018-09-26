@@ -1,0 +1,1 @@
+scalac -classpath /home/lore/IdeaProjects/MAADB - progetto/target/scala-2.12/classes -bootclasspath /home/lore/.sbt/boot/scala-2.12.6/lib/scala-library.jar /home/lore/IdeaProjects/MAADB - progetto/src/main/scala/ScalaApp.scala
