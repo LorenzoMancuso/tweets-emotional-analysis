@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180926151806"/>
+		date="20180926161819"/>
 	<dependencies>
 		<module organisation="org.scala-lang" name="scala-library">
 			<revision name="2.12.6" status="release" pubdate="20180427104006" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.6/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
@@ -18,6 +18,20 @@
 					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5267302" time="0" location="/home/lore/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.6.jar">
 						<origin-location is-local="false" location="UNKNOWN"/>
 					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.spark" name="spark-sql_2.12">
+			<revision name="2.3.1" error="not found" downloaded="false" searched="false" conf="default(compile)" position="-1">
+				<caller organisation="maadb-progetto" name="maadb-progetto_2.12" conf="compile" rev="2.3.1" rev-constraint-default="2.3.1" rev-constraint-dynamic="2.3.1" callerrev="0.1"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.spark" name="spark-core_2.11_2.12">
+			<revision name="2.3.1" error="not found" downloaded="false" searched="false" conf="default(compile)" position="-1">
+				<caller organisation="maadb-progetto" name="maadb-progetto_2.12" conf="compile" rev="2.3.1" rev-constraint-default="2.3.1" rev-constraint-dynamic="2.3.1" callerrev="0.1"/>
+				<artifacts>
 				</artifacts>
 			</revision>
 		</module>
