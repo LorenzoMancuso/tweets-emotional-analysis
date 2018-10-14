@@ -2,13 +2,14 @@ import org.apache.spark.SparkContext
 import org.apache.spark.SparkConf
 import org.apache.spark.rdd.RDD
 import java.io.File
+import java.util.Date
 // PrintWriter
 import java.io._
 
 
 class LexicalResource(var name:String, var occurrences:Int=1)
-class Lemma(var name:String, var lexicalRes:List[LexicalResource]=List[LexicalResource]())
-class Feeling(var name:String, var lemmas:List[Lemma]=List[Lemma]())
+class Lemma(var name:String, var lexicalRes:List[LexicalResource]=List[LexicalResource](), var percentage:Double=0)
+class Feeling(var name:String, var lemmas:List[Lemma]=List[Lemma](), var totalWords:Int=0)
 
 object ScalaApp {
   def main(args: Array[String]) {
@@ -23,11 +24,16 @@ object ScalaApp {
     val path:String="./DATASET/Risorse-lessicali/"
     val feelings = getListOfSubDirectories(path)
 
+    var totalFeelingWords=0
     feelings.foreach {feelingName=>
+
       if(feelingName!="ConScore"){
         var tmp:Feeling=new Feeling(feelingName)
 
+        totalFeelingWords=0
+
         getFileList(path+feelingName).foreach{lexicalResource=>
+          totalFeelingWords+=sparkCountTotalWords(path+feelingName+"/"+lexicalResource,sc)
           var resType = checkResType(lexicalResource)
 
           sparkCount(path+feelingName+"/"+lexicalResource,sc).collect().foreach{x=>
@@ -52,19 +58,26 @@ object ScalaApp {
             }
           }
         }
+        tmp.totalWords=totalFeelingWords
         feelingList=tmp::feelingList
       }
     }
 
-    val pw = new PrintWriter(new File("result.txt" ))
+    //print in result document and set percentage
+    var totalLemmaOccurrences:Float=0
+    val pw = new PrintWriter(new File("./RESULTS/result_"+new Date().toString().replaceAll(" ","_")+".txt" ))
     pw.write("print result "+feelingList.length+"\n")
     feelingList.foreach(f=>{
       pw.write(f.name)
       f.lemmas.foreach { l =>
+        totalLemmaOccurrences=0
         pw.write("   "+l.name+"\n")
         l.lexicalRes.foreach{lr=>
+          totalLemmaOccurrences+=lr.occurrences
           pw.write("       "+lr.name+" "+lr.occurrences+"\n")
         }
+        l.percentage=totalLemmaOccurrences/f.totalWords
+        pw.write("          "+l.percentage+"%\n")
       }
     })
     pw.close
@@ -136,5 +149,11 @@ object ScalaApp {
     val wordCounts = tokenized.map((_, 1)).reduceByKey(_ + _).filter(!_._1.contains("_"))
     println("finish")
     return wordCounts
+  }
+
+  def sparkCountTotalWords(filename:String, sc:SparkContext): Int ={
+    val text = sc.textFile(filename)
+    val counts = text.flatMap(line => line.split(" ")).filter(!_.contains("_")).collect.length
+    return counts
   }
 }
