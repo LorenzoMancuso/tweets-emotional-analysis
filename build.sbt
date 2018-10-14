@@ -10,4 +10,5 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % sparkVersion,
   "org.apache.spark" %% "spark-sql" % sparkVersion,
   "org.mongodb.spark" %% "mongo-spark-connector" % "2.2.1"
+  "org.mongodb.scala" %% "mongo-scala-driver" % "2.4.2"
 )

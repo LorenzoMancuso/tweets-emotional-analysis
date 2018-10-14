@@ -2,26 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfc6ccbe-c1df-4098-b0b7-c7fe8156ad0b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/MAADB - progetto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/MAADB - progetto.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$05b6f1b8408fb143ac77$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$05b6f1b8408fb143ac77.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$05b6f1b8408fb143ac77.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$11754652e89b3d38e2ce$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$11754652e89b3d38e2ce.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$11754652e89b3d38e2ce.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$1dd8177f61310d457f07$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$1dd8177f61310d457f07.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$1dd8177f61310d457f07.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$3d0c536a2a04cde5a8d5$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$3d0c536a2a04cde5a8d5.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$3d0c536a2a04cde5a8d5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$b40a13f1ba5fb4b89238$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$b40a13f1ba5fb4b89238.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$b40a13f1ba5fb4b89238.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$bb6cd7a6abc684312f2f$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$bb6cd7a6abc684312f2f.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$bb6cd7a6abc684312f2f.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RESULTS/result_Sun_Oct_14_15:31:46_CEST_2018.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RESULTS/result_Sun_Oct_14_15:33:53_CEST_2018.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RESULTS/result_Sun_Oct_14_15:35:40_CEST_2018.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RESULTS/result_Sun_Oct_14_15:36:19_CEST_2018.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RESULTS/result_Sun_Oct_14_15:40:24_CEST_2018.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RESULTS/result_Sun_Oct_14_15:40:59_CEST_2018.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RESULTS/result_Sun_Oct_14_15:42:48_CEST_2018.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RESULTS/result_Sun_Oct_14_15:43:48_CEST_2018.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RESULTS/result_Sun_Oct_14_15:44:47_CEST_2018.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/maadb-scala_spark-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/maadb-scala_spark-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/maadb-scala_spark-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/maadb-scala_spark-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-compile-internal.xml" afterDir="false" />
@@ -41,16 +33,12 @@
       <change beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/ScalaApp.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ScalaApp.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/Feeling$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/Feeling$.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/Feeling.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/Feeling.class" afterDir="false" />
@@ -62,20 +50,21 @@
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$8.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$getFileList$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$getFileList$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$getFileList$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$getFileList$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$getListOfSubDirectories$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$getListOfSubDirectories$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$getListOfSubDirectories$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$getListOfSubDirectories$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$1$$anonfun$apply$1$$anonfun$apply$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$1$$anonfun$apply$1$$anonfun$apply$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$1$$anonfun$apply$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$1$$anonfun$apply$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$2$$anonfun$apply$3$$anonfun$apply$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$2$$anonfun$apply$3$$anonfun$apply$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$2$$anonfun$apply$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$2$$anonfun$apply$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$1$$anonfun$apply$1$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$1$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$2$$anonfun$apply$3$$anonfun$apply$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$2$$anonfun$apply$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$$anonfun$main$2.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -174,29 +163,33 @@
     <session id="1615257854">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="scala" value="3585" />
+          <entry key="sbt" value="2" />
+          <entry key="scala" value="3861" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Scala" value="3585" />
+          <entry key="Scala" value="3861" />
+          <entry key="sbt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="scala" value="2" />
           <entry key="txt" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="14" />
+          <entry key="Scala" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -207,16 +200,16 @@
         <entry file="file://$PROJECT_DIR$/build.sbt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+              <caret line="12" column="55" lean-forward="true" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ScalaApp.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-426">
-              <caret line="78" column="55" selection-start-line="78" selection-start-column="55" selection-end-line="78" selection-end-column="55" />
+            <state relative-caret-position="1080">
+              <caret line="93" column="6" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -225,13 +218,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RESULTS/result_Sun_Oct_14_15:44:47_CEST_2018.txt">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/OracleUtils.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4275" />
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/MongoUtils.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Script" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -252,8 +266,10 @@
         <option value="$PROJECT_DIR$/src/main/scala/Common.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Insert.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Test.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/OracleUtils.scala" />
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/main/scala/ScalaApp.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/MongoUtils.scala" />
       </list>
     </option>
   </component>
@@ -270,9 +286,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="25" />
-    <option name="width" value="960" />
-    <option name="height" value="1055" />
+    <option name="x" value="961" />
+    <option name="y" value="27" />
+    <option name="width" value="959" />
+    <option name="height" value="1052" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -318,18 +335,25 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="MAADB - progetto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAADB-scala_spark" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539527245955" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539547069391" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -396,6 +420,11 @@
         <entry key="$PROJECT_DIR$/project/build.properties" value="249398541" />
       </map>
     </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
   </component>
   <component name="ScalaProjectSettings">
     <option name="projectViewHighlighting" value="true" />
@@ -420,11 +449,12 @@
       <workItem from="1537963533308" duration="39000" />
       <workItem from="1537967836644" duration="2538000" />
       <workItem from="1539521585167" duration="3840000" />
+      <workItem from="1539542702631" duration="4221000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40633000" />
+    <option name="totallyTimeSpent" value="44854000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -438,7 +468,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1920" height="1053" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19690502" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19903949" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -453,7 +483,7 @@
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.4994664" weight="0.32831" />
-      <window_info anchor="bottom" id="Build" order="8" sideWeight="0.5026681" side_tool="true" visible="true" weight="0.17672414" />
+      <window_info anchor="bottom" id="Build" order="8" sideWeight="0.5026681" side_tool="true" weight="0.17672414" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4994664" weight="0.3297414" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026681" side_tool="true" weight="0.17672414" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="11" sideWeight="0.49786553" weight="0.32831" />
@@ -524,13 +554,6 @@
     <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.mongodb.scala/mongo-scala-bson_2.11/srcs/mongo-scala-bson_2.11-2.4.1-sources.jar!/org/mongodb/scala/bson/codecs/package.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/Test.scala" />
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DATASET/Risorse-lessicali/Anger/EmoSN_anger.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
@@ -538,9 +561,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/result.txt" />
     <entry file="file://$PROJECT_DIR$/RESULTS/result_Sun_Oct_14_15:31:46_CEST_2018.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -576,16 +597,38 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RESULTS/result_Sun_Oct_14_15:44:47_CEST_2018.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4275" />
+        <state relative-caret-position="180">
+          <caret line="12" column="55" lean-forward="true" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/OracleUtils.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ScalaApp.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-426">
-          <caret line="78" column="55" selection-start-line="78" selection-start-column="55" selection-end-line="78" selection-end-column="55" />
+        <state relative-caret-position="1080">
+          <caret line="93" column="6" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/MongoUtils.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>

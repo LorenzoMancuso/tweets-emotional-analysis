@@ -6,17 +6,27 @@ import java.util.Date
 // PrintWriter
 import java.io._
 
-
 class LexicalResource(var name:String, var occurrences:Int=1)
 class Lemma(var name:String, var lexicalRes:List[LexicalResource]=List[LexicalResource](), var percentage:Double=0)
 class Feeling(var name:String, var lemmas:List[Lemma]=List[Lemma](), var totalWords:Int=0)
 
 object ScalaApp {
   def main(args: Array[String]) {
+
     // create Spark context with Spark configuration
-    val sc = new SparkContext(new SparkConf().setAppName("MAADB - progetto").setMaster("local[*]").set("spark.executor.memomory","1G"))
+    val sparkConf=new SparkConf()
+      .setAppName("MAADB - progetto")
+      .setMaster("local[*]")
+      .set("spark.executor.memomory","1G")
+      .set("spark.mongodb.input.uri", "mongodb://127.0.0.1/MAADB.characters")
+      .set("spark.mongodb.output.uri", "mongodb://127.0.0.1/MAADB.characters")
+
+    val sc = new SparkContext(sparkConf)
     sc.setLogLevel("ERROR")
 
+    MongoUtils.WriteToMongo(sc)
+    println("write to Mongo executed")
+    /*
     var feelingList=List[Feeling]()
     //EmoSN, NRC, sentisense, GI_NEG, GI_POS,HL-Negatives,HL-Positives,LIWC-POS,LIWC-NEG,LISTPOSEFFTERMS, LISTNEGEFFTERMS, refused
     var res_type=Array("","","","","","","","","","","","")
@@ -81,6 +91,7 @@ object ScalaApp {
       }
     })
     pw.close
+    */
   }
 
   def checkResType(lexicalResource: String): String ={
