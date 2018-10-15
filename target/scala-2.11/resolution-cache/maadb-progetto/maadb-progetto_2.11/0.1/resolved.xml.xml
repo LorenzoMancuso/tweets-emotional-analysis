@@ -4,7 +4,7 @@
 		module="maadb-progetto_2.11"
 		revision="0.1"
 		status="integration"
-		publication="20180926162332"
+		publication="20181015205103"
 	>
 		<description>
 		MAADB - progetto
@@ -35,5 +35,6 @@
 		<dependency org="org.apache.spark" name="spark-core_2.11" rev="2.3.1" conf="compile->default(compile)"/>
 		<dependency org="org.apache.spark" name="spark-sql_2.11" rev="2.3.1" conf="compile->default(compile)"/>
 		<dependency org="org.mongodb.spark" name="mongo-spark-connector_2.11" rev="2.2.1" conf="compile->default(compile)"/>
+		<dependency org="net.liftweb" name="lift-json_2.11" rev="2.6+" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
