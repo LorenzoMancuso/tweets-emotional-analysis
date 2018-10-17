@@ -32,20 +32,17 @@ object LexicalResPreProcessing extends indexes {
             var tmpLemma=tmp.lemmas.filter(_.name==x._1)
 
             if(tmpLemma.length>0){//lemma already present
-            var tmpLR=tmpLemma.head.lexicalRes.filter(_.name==resType)
+              var tmpLR=scala.collection.mutable.Map(tmpLemma.head.lexicalRes.filterKeys(_==resType).toSeq:_*)
 
-              if(tmpLR.length>0){//lr already present
-                tmpLR.head.occurrences+=x._2
+              if(tmpLR.nonEmpty){//lr already present
+                tmpLR(resType)=tmpLR(resType)+x._2
 
-              }else{//new lr for this lemma
-              var lr=new LexicalResource(lexicalResourceIndex(),resType,x._2)
-                tmpLemma.head.lexicalRes=lr::tmpLemma.head.lexicalRes
-
+              }else{//new lexical res for this lemma
+                tmpLemma.head.lexicalRes+=(resType->x._2)
               }
             }else{//new lemma for this feeling
-            var lr=new LexicalResource(lexicalResourceIndex(),resType,x._2)
               var lemma=new Lemma(lemmaIndex(),x._1)
-              lemma.lexicalRes=lr::lemma.lexicalRes
+              lemma.lexicalRes+=(resType->x._2)
               tmp.lemmas=lemma::tmp.lemmas
             }
           }
@@ -56,19 +53,19 @@ object LexicalResPreProcessing extends indexes {
       }
     }
     SetPercentage(feelingList)
-    //CheckScores(feelingList,path,sc)
+    CheckScores(feelingList,path,sc)
     PrintResultToFile(feelingList)
     return feelingList
   }
 
   //print in result document and set percentage
   def SetPercentage(feelingList:List[Feeling]): Unit ={
-    var totalLemmaOccurrences:Float=0
+    var totalLemmaOccurrences:Double=0
     feelingList.foreach(f=>{
       f.lemmas.foreach { l =>
         totalLemmaOccurrences=0
         l.lexicalRes.foreach{lr=>
-          totalLemmaOccurrences+=lr.occurrences
+          totalLemmaOccurrences=totalLemmaOccurrences+lr._2
         }
         l.percentage=totalLemmaOccurrences/f.totalWords
       }
@@ -78,20 +75,23 @@ object LexicalResPreProcessing extends indexes {
   def CheckScores(feelingList: List[Feeling], path: String, sc: SparkContext): Unit = {
     val feelingName: String = "ConScore"
     //                  lemma, List[lexicalResName,score]
-    var scores=Map[String,Map[String,Double]]()
+    var scores=scala.collection.mutable.Map[String,Map[String,Double]]()
     GetFileList(path + feelingName).foreach { lexicalResource:String =>
       SparkCount(path + feelingName + "/" + lexicalResource, sc).collect().foreach { x =>
         if(scores.filterKeys(_==x._1).nonEmpty){
           scores(x._1)+=(lexicalResource->x._2)
         }else{
-          scores+=(x._1->(lexicalResource->x._2))
+          scores+=(x._1->Map(lexicalResource->x._2))
         }
       }
     }
 
     scores.foreach{sc=>
-      feelingList.foreach{
-        _.lemmas.filter(_.name==sc._1)(0).lexicalRes//in progress
+      feelingList.foreach{f=>
+        var tmp=f.lemmas.filter(_.name==sc._1)
+        if(tmp.length>0){
+          tmp(0).lexicalRes++=sc._2
+        }
       }
     }
   }
@@ -179,7 +179,7 @@ object LexicalResPreProcessing extends indexes {
       f.lemmas.foreach { l =>
         pw.write("   "+l.id+" "+l.name+"\n")
         l.lexicalRes.foreach{lr=>
-          pw.write("       "+lr.id+" "+lr.name+" "+lr.occurrences+"\n")
+          pw.write("       "+lr._1+" "+lr._2+"\n")
         }
         pw.write("          "+l.percentage+"%\n")
       }
