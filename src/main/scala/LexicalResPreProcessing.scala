@@ -1,10 +1,13 @@
 import java.io.{File, PrintWriter}
 import java.util.Date
 
+import LexicalResPreProcessing.{GetFileList, SparkCount}
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
 
-object LexicalResPreProcessing{
+
+
+object LexicalResPreProcessing extends indexes {
 
   def PreProcessing(sc:SparkContext): List[Feeling] ={
     var feelingList=List[Feeling]()
@@ -15,10 +18,10 @@ object LexicalResPreProcessing{
     val feelings = GetListOfSubDirectories(path)
 
     var totalFeelingWords=0
-    feelings.foreach {feelingName=>
+    feelings.foreach{feelingName=>
 
-      if(feelingName!="ConScore"){
-        var tmp:Feeling=new Feeling(feelingName)
+      if(feelingName!="ConScore"){ //feelings files
+        var tmp:Feeling=new Feeling(feelingIndex(),feelingName)
         totalFeelingWords=0
 
         GetFileList(path+feelingName).foreach{lexicalResource=>
@@ -35,13 +38,13 @@ object LexicalResPreProcessing{
                 tmpLR.head.occurrences+=x._2
 
               }else{//new lr for this lemma
-              var lr=new LexicalResource(resType,x._2)
+              var lr=new LexicalResource(lexicalResourceIndex(),resType,x._2)
                 tmpLemma.head.lexicalRes=lr::tmpLemma.head.lexicalRes
 
               }
             }else{//new lemma for this feeling
-            var lr=new LexicalResource(resType,x._2)
-              var lemma=new Lemma(x._1)
+            var lr=new LexicalResource(lexicalResourceIndex(),resType,x._2)
+              var lemma=new Lemma(lemmaIndex(),x._1)
               lemma.lexicalRes=lr::lemma.lexicalRes
               tmp.lemmas=lemma::tmp.lemmas
             }
@@ -49,9 +52,12 @@ object LexicalResPreProcessing{
         }
         tmp.totalWords=totalFeelingWords
         feelingList=tmp::feelingList
+
       }
     }
     SetPercentage(feelingList)
+    //CheckScores(feelingList,path,sc)
+    PrintResultToFile(feelingList)
     return feelingList
   }
 
@@ -67,6 +73,27 @@ object LexicalResPreProcessing{
         l.percentage=totalLemmaOccurrences/f.totalWords
       }
     })
+  }
+
+  def CheckScores(feelingList: List[Feeling], path: String, sc: SparkContext): Unit = {
+    val feelingName: String = "ConScore"
+    //                  lemma, List[lexicalResName,score]
+    var scores=Map[String,Map[String,Double]]()
+    GetFileList(path + feelingName).foreach { lexicalResource:String =>
+      SparkCount(path + feelingName + "/" + lexicalResource, sc).collect().foreach { x =>
+        if(scores.filterKeys(_==x._1).nonEmpty){
+          scores(x._1)+=(lexicalResource->x._2)
+        }else{
+          scores+=(x._1->(lexicalResource->x._2))
+        }
+      }
+    }
+
+    scores.foreach{sc=>
+      feelingList.foreach{
+        _.lemmas.filter(_.name==sc._1)(0).lexicalRes//in progress
+      }
+    }
   }
 
   def CheckResType(lexicalResource: String): String ={
@@ -110,7 +137,7 @@ object LexicalResPreProcessing{
   }
 
   def GetListOfSubDirectories(directoryName: String): Array[String] = {
-    (new File(directoryName))
+    new File(directoryName)
       .listFiles
       .filter(_.isDirectory)
       .map(_.getName)
@@ -148,11 +175,11 @@ object LexicalResPreProcessing{
     val pw = new PrintWriter(new File("./RESULTS/result_"+new Date().toString().replaceAll(" ","_")+".txt" ))
     pw.write("print result "+feelingList.length+"\n")
     feelingList.foreach(f=>{
-      pw.write(f.name)
+      pw.write(f.id+" "+f.name)
       f.lemmas.foreach { l =>
-        pw.write("   "+l.name+"\n")
+        pw.write("   "+l.id+" "+l.name+"\n")
         l.lexicalRes.foreach{lr=>
-          pw.write("       "+lr.name+" "+lr.occurrences+"\n")
+          pw.write("       "+lr.id+" "+lr.name+" "+lr.occurrences+"\n")
         }
         pw.write("          "+l.percentage+"%\n")
       }

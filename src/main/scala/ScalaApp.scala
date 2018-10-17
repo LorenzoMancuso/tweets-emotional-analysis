@@ -9,9 +9,15 @@ import LexicalResPreProcessing._
 import MongoUtils._
 import OracleUtils._
 
-case class LexicalResource(var name:String, var occurrences:Int=1)
-case class Lemma(var name:String, var lexicalRes:List[LexicalResource]=List[LexicalResource](), var percentage:Double=0)
-case class Feeling(var name:String, var lemmas:List[Lemma]=List[Lemma](), var totalWords:Int=0)
+trait indexes {
+  val lexicalResourceIndex={ var i :Long= 0; () => { i += 1; i} }
+  val lemmaIndex={ var i :Long= 0; () => { i += 1; i} }
+  val feelingIndex={ var i :Long= 0; () => { i += 1; i} }
+}
+
+case class LexicalResource(var id:Long, var name:String, var occurrences:Int=1)
+case class Lemma(var id:Long, var name:String, var lexicalRes:List[LexicalResource]=List[LexicalResource](), var percentage:Double=0)
+case class Feeling(var id:Long, var name:String, var lemmas:List[Lemma]=List[Lemma](), var totalWords:Int=0)
 
 object ScalaApp {
   def main(args: Array[String]) {
@@ -32,8 +38,8 @@ object ScalaApp {
     //WriteToMongo(sc,preprocessedLexicalRes)
     //println("write to Mongo executed")
 
-    WriteToOracle(sc,preprocessedLexicalRes)
-    println("write to Oracle executed")
+    //WriteToOracle(sc,preprocessedLexicalRes)
+    //println("write to Oracle executed")
   }
 
 }
