@@ -77,11 +77,13 @@ object LexicalResPreProcessing extends indexes {
     //                  lemma, List[lexicalResName,score]
     var scores=scala.collection.mutable.Map[String,Map[String,Double]]()
     GetFileList(path + feelingName).foreach { lexicalResource:String =>
+      var nameSplit = lexicalResource.replaceAll("(\\.[^\\.]*$)", "")
       SparkCount(path + feelingName + "/" + lexicalResource, sc).collect().foreach { x =>
+        var split = x._1.split("\t")
         if(scores.filterKeys(_==x._1).nonEmpty){
-          scores(x._1)+=(lexicalResource->x._2)
+          scores(split(0))+=(nameSplit->split(1).toDouble)
         }else{
-          scores+=(x._1->Map(lexicalResource->x._2))
+          scores+=(split(0)->Map(nameSplit->split(1).toDouble))
         }
       }
     }
