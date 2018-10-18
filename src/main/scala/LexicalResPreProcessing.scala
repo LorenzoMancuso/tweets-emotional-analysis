@@ -163,6 +163,7 @@ object LexicalResPreProcessing extends indexes {
     // count the occurrence of each word
     val wordCounts = tokenized.map((_, 1)).reduceByKey(_ + _).filter(!_._1.contains("_"))
     println("finish")
+
     return wordCounts
   }
 
