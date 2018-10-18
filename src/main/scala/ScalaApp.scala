@@ -31,13 +31,13 @@ object ScalaApp {
     val sc = new SparkContext(sparkConf)
     sc.setLogLevel("ERROR")
 
-    val preprocessedLexicalRes=PreProcessing(sc)
+    val preprocessedLexicalRes=LexicalResPreProcessingAlt.PreProcessingAlt(sc)
 
     //WriteToMongo(sc,preprocessedLexicalRes)
     //println("write to Mongo executed")
 
-    WriteToOracle(sc,preprocessedLexicalRes)
-    println("write to Oracle executed")
+    //WriteToOracle(sc,preprocessedLexicalRes)
+    //println("write to Oracle executed")
   }
 
 }
