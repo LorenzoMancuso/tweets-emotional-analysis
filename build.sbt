@@ -1,8 +1,14 @@
-name := "untitled"
+name := "MAADB - progetto"
 
 version := "0.1"
 
-scalaVersion := "2.11.11"
+scalaVersion := "2.11.12"
 
-// https://mvnrepository.com/artifact/org.apache.spark/spark-core
-libraryDependencies += "org.apache.spark" %% "spark-core" % "2.3.0"
+val sparkVersion = "2.3.1"
+
+libraryDependencies ++= Seq(
+  "org.apache.spark" %% "spark-core" % sparkVersion,
+  "org.apache.spark" %% "spark-sql" % sparkVersion,
+  "org.mongodb.spark" %% "mongo-spark-connector" % "2.2.1",
+  "net.liftweb" %% "lift-json" % "2.6+"
+)

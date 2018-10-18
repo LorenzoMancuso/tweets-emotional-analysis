@@ -1,0 +1,12 @@
+[0m[[0m[31merror[0m] [0m[0m/home/luca-laudiero/Scrivania/Universita/MAADB/MAADB-scala_spark/src/main/scala/LexicalResPreProcessing.scala:83:23: value += is not a member of Map[String,Double][0m
+[0m[[0m[31merror[0m] [0m[0m  Expression does not convert to assignment because:[0m
+[0m[[0m[31merror[0m] [0m[0m    type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m     found   : String[0m
+[0m[[0m[31merror[0m] [0m[0m     required: Double[0m
+[0m[[0m[31merror[0m] [0m[0m    expansion: {[0m
+[0m[[0m[31merror[0m] [0m[0m  <synthetic> val ev$1: scala.collection.mutable.Map[String,Map[String,Double]] = scores;[0m
+[0m[[0m[31merror[0m] [0m[0m  ev$1.update(x._1, ev$1.apply(x._1).+(lexicalResource.$minus$greater(split(1))))[0m
+[0m[[0m[31merror[0m] [0m[0m}[0m
+[0m[[0m[31merror[0m] [0m[0m          scores(x._1)+=(lexicalResource->split(1))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
