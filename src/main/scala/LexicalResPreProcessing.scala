@@ -54,7 +54,7 @@ object LexicalResPreProcessing extends indexes {
     }
     SetPercentage(feelingList)
     CheckScores(feelingList,path,sc)
-    PrintResultToFile(feelingList)
+    //PrintResultToFile(feelingList)
     return feelingList
   }
 
