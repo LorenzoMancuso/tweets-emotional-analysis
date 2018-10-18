@@ -9,6 +9,7 @@ import MongoUtils._
 import OracleUtils._
 
 trait indexes {
+  val lexResIndex={ var i :Long= 0; () => { i += 1; i} }
   val lemmaIndex={ var i :Long= 0; () => { i += 1; i} }
   val feelingIndex={ var i :Long= 0; () => { i += 1; i} }
 }
@@ -35,8 +36,8 @@ object ScalaApp {
     //WriteToMongo(sc,preprocessedLexicalRes)
     //println("write to Mongo executed")
 
-    //WriteToOracle(sc,preprocessedLexicalRes)
-    //println("write to Oracle executed")
+    WriteToOracle(sc,preprocessedLexicalRes)
+    println("write to Oracle executed")
   }
 
 }
