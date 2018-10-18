@@ -4,7 +4,7 @@
 		module="maadb-progetto$sources"
 		revision="0.1"
 		status="integration"
-		publication="20181018091256"
+		publication="20181018231451"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="maadb-scala_spark_9549,MAADB - progetto" />
+    <parameters>
+      <parameter value="-Yliteral-types" />
+    </parameters>
+    <profile name="sbt 1" modules="maadb-scala_spark_9387,MAADB - progetto" />
   </component>
 </project>
