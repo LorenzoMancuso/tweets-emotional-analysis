@@ -15,16 +15,6 @@ object MongoUtils{
       .getOrCreate()
     import sqlContext.implicits._
     df.createOrReplaceTempView("tmp")
-    /*
-    root
-    |-- FEELING: string (nullable = true)
-    |-- LEMMA: string (nullable = true)
-    |-- PERCENTAGE: double (nullable = true)
-    |-- lexicalRes: array (nullable = true)
-    |    |-- element: struct (containsNull = true)
-    |    |    |-- LEXICAL_RESOURCE: string (nullable = true)
-    |    |    |-- count: long (nullable = false)
-    */
     sqlContext.sql("select FEELING,LEMMA,PERCENTAGE, collect_list(struct(LEXICAL_RESOURCE,count)) as lexicalRes from tmp group by FEELING,LEMMA,PERCENTAGE").createOrReplaceTempView("tmp")
     val res=sqlContext.sql("select FEELING, collect_list(struct(LEMMA,PERCENTAGE,lexicalRes)) as lemmas from tmp group by FEELING").toJSON.collect
 
