@@ -1,10 +1,20 @@
 import java.io.File
 import org.apache.spark.SparkContext
 import org.apache.spark.sql.{DataFrame, SparkSession}
+import org.apache.spark.sql.functions.lit
 
 object LexicalResPreProcessingAlt{
 
-  def PreProcessingAlt(sc: SparkContext): Unit ={
+  /*root
+     |-- FEELING: string (nullable = true)
+     |-- LEMMA: string (nullable = true)
+     |-- LEXICAL_RESOURCE: string (nullable = true)
+     |-- count: long (nullable = false)
+     |-- TOTAL: long (nullable = true)
+     |-- TOTAL_LEMMA: long (nullable = true)
+     |-- PERCENTAGE: double (nullable = true)*/
+
+  def PreProcessingAlt(sc: SparkContext): DataFrame ={
     val sqlContext:SparkSession = SparkSession
       .builder()
       .appName("MAADB - progetto")
@@ -16,21 +26,41 @@ object LexicalResPreProcessingAlt{
 
     //get lemmas list with occurrences
     GetListOfSubDirectories(path).foreach{feeling=>
-      GetFileList(path + feeling).foreach { lr =>
-        if (df == null) {
-          df = ReadFile(path, lr, feeling, sc, sqlContext)
-        } else {
-          if(feeling=="ConScore") {
-            df = df.union(ReadScores(path, lr, feeling, sc, sqlContext))
-          }else {
+      if(feeling!="ConScore"){
+        GetFileList(path + feeling).foreach { lr =>
+          if (df == null) {
+            df = ReadFile(path, lr, feeling, sc, sqlContext)
+          } else {
             df = df.union(ReadFile(path, lr, feeling, sc, sqlContext))
           }
         }
       }
     }
-    //df.createOrReplaceTempView("tmp")
-    //df=sqlContext.sql("SELECT *, COUNT(*) AS TOTAL")
-    PrintToCSV(df)
+
+    //***ADD PERCENTAGE***
+    df.createOrReplaceTempView("tmp")
+    var tmp1=sqlContext.sql("SELECT FEELING, SUM(COUNT) AS TOTAL FROM tmp GROUP BY FEELING")
+    var tmp2=sqlContext.sql("SELECT FEELING, LEMMA, SUM(COUNT) AS TOTAL_LEMMA FROM tmp GROUP BY FEELING,LEMMA")
+    var joined=tmp1.join(tmp2,Seq("FEELING"))
+    df=df.join(joined,Seq("FEELING","LEMMA")).withColumn("PERCENTAGE", joined("TOTAL_LEMMA")/joined("TOTAL")).drop("TOTAL").drop("TOTAL_LEMMA")
+
+    //***ADD SCORES***
+    var scores:DataFrame=null
+    GetFileList(path + "ConScore").foreach { lr =>
+      if (scores == null) {
+        scores = ReadScores(path, lr, "ConScore", sc, sqlContext)
+      } else {
+        scores = scores.union(ReadScores(path, lr, "ConScore", sc, sqlContext))
+      }
+    }
+
+    println("schema with scores")
+    scores=df.join(scores,"LEMMA").select(df("FEELING"),df("LEMMA"),scores("LEXICAL_RESOURCE"),scores("COUNT"),df("PERCENTAGE"))
+    df=df.union(scores)
+
+    df.printSchema()
+    return df
+    //PrintToCSV(df)
   }
 
   def GetListOfSubDirectories(directoryName: String): Array[String] = {
@@ -65,7 +95,7 @@ object LexicalResPreProcessingAlt{
     import sqlContext.implicits._
     val tokenized = sc.textFile(path+feelingName+"/"+filename)
       .flatMap(_.split("\n"))
-      .map(x=>(feelingName,x.split("\t")(0),CleanLRName(filename),x.split("\t")(1)))
+      .map(x=>(feelingName,x.split("\t")(0),CleanScoreName(filename),x.split("\t")(1)))
       .toDF("FEELING","LEMMA","LEXICAL_RESOURCE","COUNT")
     return tokenized
   }
@@ -73,6 +103,13 @@ object LexicalResPreProcessingAlt{
   def CleanLRName(name:String):String={
     var res=name.replaceAll("(\\.[^\\.]*$)", "")
     if(!res.contains("POS") && !res.contains("NEG") )
+      res=res.replaceAll("(\\_[^\\_]*$)", "")
+    return res
+  }
+
+  def CleanScoreName(name:String):String={
+    var res=name.replaceAll("(\\.[^\\.]*$)", "")
+    if(res.contains("tab"))
       res=res.replaceAll("(\\_[^\\_]*$)", "")
     return res
   }
