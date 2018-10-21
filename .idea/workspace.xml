@@ -3,75 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="0fb7e742-94f1-4168-a09f-5b9a7d09e11c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/LexicalResPreProcessingAlt.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/LexicalResPreProcessingAlt.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RESULTS/.part-00000-82977edf-aa0c-479d-95e4-1e95e2a86512-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RESULTS/part-00000-82977edf-aa0c-479d-95e4-1e95e2a86512-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RESULTS/result_Thu_Oct_18_11:44:10_CEST_2018.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/ScalaApp.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ScalaApp.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/TweetsPreProcessing.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/UtilsPreProcessing.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/.history" beforeDir="false" afterPath="$PROJECT_DIR$/target/.history" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/Feeling$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/Feeling$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/Feeling.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/Feeling.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/Lemma$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/Lemma$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/Lemma.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/Lemma.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$9.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$CheckScores$1$$anonfun$apply$5$$anonfun$apply$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$CheckScores$1$$anonfun$apply$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$CheckScores$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$CheckScores$2$$anonfun$apply$7$$anonfun$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$CheckScores$2$$anonfun$apply$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$CheckScores$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$GetFileList$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$GetFileList$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$GetListOfSubDirectories$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$GetListOfSubDirectories$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$PreProcessing$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$PreProcessing$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$PreProcessing$1$$anonfun$apply$1$$anonfun$apply$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$PreProcessing$1$$anonfun$apply$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$PreProcessing$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$PrintResultToFile$1$$anonfun$apply$8$$anonfun$apply$9.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$PrintResultToFile$1$$anonfun$apply$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$PrintResultToFile$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$SetPercentage$1$$anonfun$apply$3$$anonfun$apply$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$SetPercentage$1$$anonfun$apply$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$$anonfun$SetPercentage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessing.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/MongoUtils$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/MongoUtils$$anonfun$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/MongoUtils$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/MongoUtils$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$anonfun$FeelingToOracleObject$1$$anonfun$apply$1$$anonfun$apply$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$anonfun$FeelingToOracleObject$1$$anonfun$apply$1$$anonfun$apply$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$anonfun$FeelingToOracleObject$1$$anonfun$apply$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$anonfun$FeelingToOracleObject$1$$anonfun$apply$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$anonfun$FeelingToOracleObject$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$anonfun$FeelingToOracleObject$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$typecreator13$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$typecreator13$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$typecreator21$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$typecreator21$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$typecreator5$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$typecreator5$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/TweetsPreProcessing.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/TweetsPreProcessing.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/TweetsPreProcessing$$anonfun$PreProcessing$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/TweetsPreProcessing$$anonfun$PreProcessing$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/TweetsPreProcessing$$anonfun$SplitEmoji$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/TweetsPreProcessing$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/TweetsPreProcessing$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/indexes$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/indexes$$anonfun$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/indexes$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/indexes$$anonfun$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/indexes$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/indexes$$anonfun$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/indexes$class.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/indexes$class.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/maadb-progetto/maadb-progetto_2.11/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/maadb-progetto/maadb-progetto_2.11/0.1/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/maadb-progetto/maadb-progetto_2.11/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/maadb-progetto/maadb-progetto_2.11/0.1/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-compile-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-compile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-optional.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-provided.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-runtime-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-runtime.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-scala-tool.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-test-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto_2.11-test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/TweetsPreProcessing.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/TweetsPreProcessing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/compile/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compile/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.11.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.11.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
@@ -141,7 +83,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="15" />
+          <entry key="csv" value="27" />
           <entry key="sbt" value="1" />
           <entry key="scala" value="5" />
           <entry key="txt" value="3" />
@@ -149,7 +91,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="18" />
+          <entry key="PLAIN_TEXT" value="30" />
           <entry key="Scala" value="5" />
           <entry key="sbt" value="1" />
         </counts>
@@ -157,14 +99,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="csv" value="2" />
-          <entry key="scala" value="4433" />
+          <entry key="scala" value="5305" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Scala" value="4433" />
+          <entry key="Scala" value="5305" />
         </counts>
       </usages-collector>
     </session>
@@ -179,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ScalaApp.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="40" selection-start-line="40" selection-end-line="41" selection-end-column="41" />
+            <state relative-caret-position="333">
+              <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -191,20 +133,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/UtilsPreProcessing.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="89" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="89" />
+            <state relative-caret-position="90">
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/TweetsPreProcessing.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-57">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -212,8 +151,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/OracleUtils.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1083">
-              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="348">
+              <caret line="90" column="127" selection-start-line="90" selection-start-column="127" selection-end-line="90" selection-end-column="127" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -221,11 +160,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/LexicalResPreProcessingAlt.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="57" column="41" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="41" />
+            <state relative-caret-position="202">
+              <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -236,8 +175,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/MongoUtils.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="103" selection-start-line="18" selection-start-column="97" selection-end-line="18" selection-end-column="103" />
+            <state relative-caret-position="255">
+              <caret line="17" selection-start-line="17" selection-end-line="18" selection-end-column="146" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
               </folding>
@@ -288,9 +227,9 @@
         <option value="$PROJECT_DIR$/RESULTS/part-00000-eec6bec7-6b72-43ff-a286-c6ef6ba08a8d-c000.csv" />
         <option value="$PROJECT_DIR$/src/main/scala/MongoUtils.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/OracleUtils.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ScalaApp.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/LexicalResPreProcessingAlt.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/UtilsPreProcessing.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ScalaApp.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/TweetsPreProcessing.scala" />
       </list>
     </option>
@@ -370,7 +309,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540130932530" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540137648757" />
     <property name="last_opened_file_path" value="/usr/lib/ojdbc6.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -463,13 +402,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45719000" />
+    <option name="totallyTimeSpent" value="52432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25987193" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25987193" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -478,7 +417,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32938644" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32938644" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -543,60 +482,105 @@
     <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-82977edf-aa0c-479d-95e4-1e95e2a86512-c000.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/OracleUtils.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-90d19342-9459-4fce-b153-6f83edd7c218-c000.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/TweetsPreProcessing.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-c122e14a-6ce7-4ee8-95a1-5258e0f8a042-c000.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ScalaApp.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="40" selection-start-line="40" selection-end-line="41" selection-end-column="41" />
+        <state relative-caret-position="333">
+          <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/UtilsPreProcessing.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="89" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="89" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-03074647-7d03-415a-883e-c9a125b37cb3-c000.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-e46e5b8c-dbb7-461d-b5bd-d14e044945d6-c000.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state>
+          <caret column="107" selection-start-column="107" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-dc1c6d35-840b-45fb-9653-d30a3e76902f-c000.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-2ee9f8c6-e431-4e04-8e87-78b34fc6841c-c000.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-0b239523-1efa-4609-aea8-0905e286e68c-c000.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RESULTS/_temporary/0/_temporary/attempt_20181021173449_0001_m_000000_0/part-00000-1d5cbe4d-cbc7-4af4-a10f-ea3cf6df25ed-c000.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-1d5cbe4d-cbc7-4af4-a10f-ea3cf6df25ed-c000.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-9dd8285e-0b38-4097-8eae-a4ae568466d5-c000.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="30">
+          <caret line="2" column="8" selection-start-line="2" selection-end-line="2" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/MongoUtils.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="103" selection-start-line="18" selection-start-column="97" selection-end-line="18" selection-end-column="103" />
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="18" selection-end-column="146" />
           <folding>
             <element signature="e#0#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/UtilsPreProcessing.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/OracleUtils.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="90" column="127" selection-start-line="90" selection-start-column="127" selection-end-line="90" selection-end-column="127" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/LexicalResPreProcessingAlt.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="57" column="41" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="41" />
+        <state relative-caret-position="202">
+          <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-c8e11730-4117-40e6-acec-cad12d604777-c000.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="105">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-474b0ef3-93ea-43da-99f1-15f558a2562c-c000.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/TweetsPreProcessing.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
