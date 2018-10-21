@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 [0m[[0m[31merror[0m] [0m[0m/home/lore/Universita/MAADB-scala_spark/src/main/scala/TweetsPreProcessing.scala:43:53: missing parameter type for expanded function ((x$1) => UtilsPreProcessing.slang.getOrElse(x$1, word))[0m
 [0m[[0m[31merror[0m] [0m[0m      .map(word=>UtilsPreProcessing.slang.getOrElse(_,word)) //sostituire slang[0m
 [0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
+=======
+[0m[[0m[31merror[0m] [0m[0m/home/luca-laudiero/Scrivania/Universita/MAADB/MAADB-scala_spark/src/main/scala/TweetsPreProcessing.scala:57:66: Int.type does not take parameters[0m
+[0m[[0m[31merror[0m] [0m[0m  def CountEmoji = udf((tweets: String, emojiType:String) => Int {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                 ^[0m
+>>>>>>> emoji
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
