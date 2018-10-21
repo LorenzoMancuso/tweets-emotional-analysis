@@ -34,8 +34,8 @@ object ScalaApp {
 
     val preprocessedLexicalRes=LexicalResPreProcessingAlt.PreProcessingAlt(sc)
 
-    WriteToMongo(sc,preprocessedLexicalRes)
-     println("write to Mongo executed")
+    //WriteToMongo(sc,preprocessedLexicalRes)
+    //println("write to Mongo executed")
 
     //WriteToOracle(sc,preprocessedLexicalRes)
     //println("write to Oracle executed")

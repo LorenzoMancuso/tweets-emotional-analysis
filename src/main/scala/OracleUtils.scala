@@ -10,7 +10,7 @@ private case class FeelingOracle(var id:Long, var name:String, var totalWords:In
 
 object OracleUtils extends indexes {
 
-  def WriteToOracle(sc:SparkContext,feelingList:List[Feeling]) :Unit={
+  def WriteToOracle(sc:SparkContext,df:DataFrame) :Unit={
 
     //***ORACLE CONF***
     val sqlContext:SparkSession = SparkSession
@@ -35,8 +35,7 @@ object OracleUtils extends indexes {
     connectionProperties.setProperty("Driver", driverClass)
     //***END ORACLE CONF***
 
-
-
+    //CALL 3 ORACLE INSERT WITH DIFFERENT QUERIES ON DATASET
   }
 
   def WriteToOracleOld(sc:SparkContext,feelingList:List[Feeling]) :Unit={

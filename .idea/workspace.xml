@@ -4,63 +4,9 @@
     <list default="true" id="0fb7e742-94f1-4168-a09f-5b9a7d09e11c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/modules/MAADB - progetto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/MAADB - progetto.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RESULTS/.part-00000-1b5ef0bb-9fc8-4ec7-8bd1-733c02962ce5-c000.csv.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RESULTS/part-00000-1b5ef0bb-9fc8-4ec7-8bd1-733c02962ce5-c000.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/maadb-scala_spark-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/maadb-scala_spark-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/maadb-scala_spark-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/maadb-scala_spark-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-compile-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-compile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-optional.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-provided.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-runtime-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-runtime.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-scala-tool.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-test-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-maadb-scala_spark-build-test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/LexicalResPreProcessingAlt.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/LexicalResPreProcessingAlt.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/MongoUtils.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/MongoUtils.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/OracleUtils.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/OracleUtils.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/ScalaApp.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ScalaApp.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/.history" beforeDir="false" afterPath="$PROJECT_DIR$/target/.history" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/Feeling$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/Feeling$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/Feeling.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/Feeling.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/Lemma$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/Lemma$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/Lemma.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/Lemma.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$GetFileList$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$GetFileList$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$GetFileList$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$GetFileList$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$GetListOfSubDirectories$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$GetListOfSubDirectories$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$GetListOfSubDirectories$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$GetListOfSubDirectories$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$PreProcessingAlt$1$$anonfun$apply$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$PreProcessingAlt$1$$anonfun$apply$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$PreProcessingAlt$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$anonfun$PreProcessingAlt$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$typecreator13$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$typecreator13$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$typecreator5$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$$typecreator5$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/LexicalResPreProcessingAlt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/MongoUtils$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/MongoUtils$$anonfun$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/MongoUtils$$anonfun$WriteToMongo$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/MongoUtils$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/MongoUtils$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/MongoUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/MongoUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$anonfun$FeelingToOracleObject$1$$anonfun$apply$1$$anonfun$apply$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$anonfun$FeelingToOracleObject$1$$anonfun$apply$1$$anonfun$apply$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$anonfun$FeelingToOracleObject$1$$anonfun$apply$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$anonfun$FeelingToOracleObject$1$$anonfun$apply$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$anonfun$FeelingToOracleObject$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$anonfun$FeelingToOracleObject$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$typecreator13$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$typecreator13$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$typecreator21$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$typecreator21$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$typecreator5$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$$typecreator5$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/OracleUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ScalaApp$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/indexes$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/indexes$$anonfun$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/indexes$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/indexes$$anonfun$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/indexes$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/indexes$$anonfun$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/indexes$class.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/indexes$class.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/maadb-progetto/maadb-progetto$sbt_2.12/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/maadb-progetto/maadb-progetto$sbt_2.12/0.1/resolved.xml.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/maadb-progetto/maadb-progetto$sbt_2.12/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/maadb-progetto/maadb-progetto$sbt_2.12/0.1/resolved.xml.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/maadb-progetto/maadb-progetto$sources/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/maadb-progetto/maadb-progetto$sources/0.1/resolved.xml.properties" afterDir="false" />
@@ -92,8 +38,6 @@
       <change beforePath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructureTo/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructureTo/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.11.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.11.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -143,11 +87,12 @@
     <session id="1615257854">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -168,14 +113,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="csv" value="2" />
-          <entry key="scala" value="3993" />
+          <entry key="scala" value="4093" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Scala" value="3993" />
+          <entry key="Scala" value="4093" />
         </counts>
       </usages-collector>
     </session>
@@ -187,11 +132,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ScalaApp.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="510">
+              <caret line="34" selection-start-line="34" selection-end-line="34" selection-end-column="78" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -202,22 +147,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/OracleUtils.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="720">
+              <caret line="99" column="20" lean-forward="true" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/LexicalResPreProcessing.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="35" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -226,8 +159,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/LexicalResPreProcessingAlt.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="684">
+              <caret line="118" selection-start-line="118" selection-end-line="122" selection-end-column="25" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -236,17 +169,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-82977edf-aa0c-479d-95e4-1e95e2a86512-c000.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-315" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/MongoUtils.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            <state relative-caret-position="270">
+              <caret line="18" column="103" selection-start-line="18" selection-start-column="97" selection-end-line="18" selection-end-column="103" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
               </folding>
@@ -282,10 +208,10 @@
         <option value="$PROJECT_DIR$/RESULTS/result_Thu_Oct_18_21:04:41_CEST_2018.txt" />
         <option value="$PROJECT_DIR$/DATASET/Risorse-lessicali/ConScore/afinn.txt" />
         <option value="$PROJECT_DIR$/RESULTS/part-00000-eec6bec7-6b72-43ff-a286-c6ef6ba08a8d-c000.csv" />
-        <option value="$PROJECT_DIR$/src/main/scala/MongoUtils.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/OracleUtils.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/LexicalResPreProcessingAlt.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/MongoUtils.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ScalaApp.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/OracleUtils.scala" />
       </list>
     </option>
   </component>
@@ -306,6 +232,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -341,14 +268,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/luca-laudiero/Scrivania/Universita/MAADB/MAADB-scala_spark/RESULTS/result_Thu_Oct_18_09:32:02_CEST_2018.txt" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539964548906" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539970825751" />
     <property name="last_opened_file_path" value="/usr/lib/ojdbc6.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -432,18 +358,19 @@
       <workItem from="1539846697543" duration="2172000" />
       <workItem from="1539854333736" duration="9410000" />
       <workItem from="1539879455401" duration="13766000" />
-      <workItem from="1539934547988" duration="15139000" />
+      <workItem from="1539934547988" duration="16687000" />
+      <workItem from="1540126327768" duration="919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40487000" />
+    <option name="totallyTimeSpent" value="42954000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25773746" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.26040554" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -452,7 +379,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32938644" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32938644" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -505,55 +432,42 @@
     <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-a2daf798-5f94-4e22-bd43-1e20aa31042d-c000.csv" />
     <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-025fbc46-2ab2-4b4f-9f68-390c2b89fc8a-c000.csv" />
     <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-e1c9e0dc-cdf8-4235-8f69-cda5aa7bfb52-c000.csv" />
-    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-1b5ef0bb-9fc8-4ec7-8bd1-733c02962ce5-c000.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-01de2328-8b18-4108-95a5-a1ae7e4b21ad-c000.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-464afd98-ba59-494c-810f-3da5598ab649-c000.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-1b5ef0bb-9fc8-4ec7-8bd1-733c02962ce5-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-01de2328-8b18-4108-95a5-a1ae7e4b21ad-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-464afd98-ba59-494c-810f-3da5598ab649-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-eec6bec7-6b72-43ff-a286-c6ef6ba08a8d-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-c159cfc1-ca4e-45e0-ba2b-c93781a3d482-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/LexicalResPreProcessing.scala" />
     <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-eec6bec7-6b72-43ff-a286-c6ef6ba08a8d-c000.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="7727" column="8" selection-start-line="7727" selection-start-column="4" selection-end-line="7727" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-c159cfc1-ca4e-45e0-ba2b-c93781a3d482-c000.csv">
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-82977edf-aa0c-479d-95e4-1e95e2a86512-c000.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/OracleUtils.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="720">
+          <caret line="99" column="20" lean-forward="true" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-82977edf-aa0c-479d-95e4-1e95e2a86512-c000.csv">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/LexicalResPreProcessingAlt.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315" />
+        <state relative-caret-position="684">
+          <caret line="118" selection-start-line="118" selection-end-line="122" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/MongoUtils.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        <state relative-caret-position="270">
+          <caret line="18" column="103" selection-start-line="18" selection-start-column="97" selection-end-line="18" selection-end-column="103" />
           <folding>
             <element signature="e#0#53#0" expanded="true" />
           </folding>
@@ -562,30 +476,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ScalaApp.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="510">
+          <caret line="34" selection-start-line="34" selection-end-line="34" selection-end-column="78" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/LexicalResPreProcessingAlt.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/LexicalResPreProcessing.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
