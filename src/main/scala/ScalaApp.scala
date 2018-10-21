@@ -35,6 +35,8 @@ object ScalaApp {
     val preprocessedLexicalRes=LexicalResPreProcessingAlt.PreProcessingAlt(sc)
     UtilsPreProcessing.PreProcessing(sc)
 
+    TweetsPreProcessing.PreProcessing(sc)
+
     //WriteToMongo(sc,preprocessedLexicalRes)
     //println("write to Mongo executed")
 
