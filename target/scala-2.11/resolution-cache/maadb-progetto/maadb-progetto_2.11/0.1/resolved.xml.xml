@@ -4,11 +4,7 @@
 		module="maadb-progetto_2.11"
 		revision="0.1"
 		status="integration"
-<<<<<<< HEAD
-		publication="20181018204601"
-=======
-		publication="20181018114009"
->>>>>>> tweets-processing
+		publication="20181021151206"
 	>
 		<description>
 		MAADB - progetto

@@ -54,11 +54,11 @@ object LexicalResPreProcessingAlt{
       }
     }
 
-    println("schema with scores")
+    //println("schema with scores")
     scores=df.join(scores,"LEMMA").select(df("FEELING"),df("LEMMA"),scores("LEXICAL_RESOURCE"),scores("COUNT"),df("PERCENTAGE"))
     df=df.union(scores)
 
-    df.printSchema()
+    //df.printSchema()
     return df
     //PrintToCSV(df)
   }

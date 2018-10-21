@@ -33,6 +33,7 @@ object ScalaApp {
     sc.setLogLevel("ERROR")
 
     val preprocessedLexicalRes=LexicalResPreProcessingAlt.PreProcessingAlt(sc)
+    UtilsPreProcessing.PreProcessing(sc)
 
     //WriteToMongo(sc,preprocessedLexicalRes)
     //println("write to Mongo executed")

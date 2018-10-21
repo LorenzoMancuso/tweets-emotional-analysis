@@ -7,11 +7,7 @@
 		revision="0.1"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-<<<<<<< HEAD
-		date="20181018204601"/>
-=======
-		date="20181018114009"/>
->>>>>>> tweets-processing
+		date="20181021151206"/>
 	<dependencies>
 		<module organisation="net.liftweb" name="lift-json_2.11">
 			<revision name="2.6.3" status="release" pubdate="20160131062433" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.liftweb.net" downloaded="false" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="163">
