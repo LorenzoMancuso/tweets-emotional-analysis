@@ -59,3 +59,5 @@ all {file:/home/lore/Universita/MAADB-scala_spark/}maadb-scala_spark/products {f
 all {file:/home/lore/Universita/MAADB-scala_spark/}maadb-scala_spark/products {file:/home/lore/Universita/MAADB-scala_spark/}maadb-scala_spark/test:products
 ;reload; set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers resolveSbtClassifiers" ;*/*:dumpStructureTo /tmp/sbt-structure.xml; session clear-all
 all {file:/home/luca-laudiero/Scrivania/Universita/MAADB/MAADB-scala_spark/}maadb-scala_spark/products {file:/home/luca-laudiero/Scrivania/Universita/MAADB/MAADB-scala_spark/}maadb-scala_spark/test:products
+;reload; set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers resolveSbtClassifiers" ;*/*:dumpStructureTo /tmp/sbt-structure.xml; session clear-all
+all {file:/home/lore/Universita/MAADB-scala_spark/}maadb-scala_spark/products {file:/home/lore/Universita/MAADB-scala_spark/}maadb-scala_spark/test:products

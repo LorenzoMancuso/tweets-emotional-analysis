@@ -36,8 +36,6 @@ object ScalaApp {
     UtilsPreProcessing.PreProcessing(sc)
     TweetsPreProcessing.PreProcessing(sc)
 
-    TweetsPreProcessing.PreProcessing(sc)
-
     //WriteToMongo(sc,preprocessedLexicalRes)
     //println("write to Mongo executed")
 

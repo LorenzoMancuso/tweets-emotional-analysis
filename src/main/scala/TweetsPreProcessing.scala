@@ -4,6 +4,7 @@ import org.apache.spark.sql.functions.udf
 import org.apache.spark.sql.functions.lit
 import org.apache.commons.lang.StringUtils
 import org.apache.spark.SparkContext
+import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.{Column, DataFrame, SparkSession}
 
 object TweetsPreProcessing{
@@ -25,7 +26,29 @@ object TweetsPreProcessing{
         tweets=tweets.union(ReadFile(path,fileName,fileName.split("_")(2),sc,sqlContext))
       }
     }
-    var emojis = CountEmojiHelper(tweets, sqlContext)
+
+    //println("count emojis")
+    //var emojis = CountEmojiHelper(tweets, sqlContext)
+
+    /*
+    FEELING: String
+    HASHTAG: String
+    COUNT: Int
+     */
+
+    println("count hashtags")
+    var hashtags:DataFrame = CountHashtagsHelper(tweets, sqlContext, sc)
+  }
+
+  def CountHashtagsHelper(tweets:DataFrame, sqlContext:SparkSession, sc:SparkContext): DataFrame = {
+    import sqlContext.implicits._
+    var hashtags = tweets.map(x=>(x.getString(0),x.getString(1),
+      sc.parallelize(x.getString(1).split(" ").filter(_.contains("#"))).map(x=>(x,1)).reduceByKey(_+_).collect())
+    ).toDF("FEELING","TWEETS","HASHTAGS")
+    hashtags.printSchema()
+
+
+    return hashtags
   }
 
   def ReadFile(path:String,filename:String, feelingName: String, sc:SparkContext, sqlContext:SparkSession): DataFrame ={
@@ -34,8 +57,6 @@ object TweetsPreProcessing{
     val tokenized = sc.wholeTextFiles(path+filename)
       .map(t=>(feelingName,CleanTweet(t._2:String)))
       .toDF("FEELING","TWEETS")
-
-    tokenized.printSchema()
     return tokenized
   }
 
@@ -53,7 +74,11 @@ object TweetsPreProcessing{
   def CountEmojiHelper(tweets:DataFrame, sqlContext:SparkSession): DataFrame = {
     import sqlContext.implicits._
     var emojis = tweets;
-    emojis = emojis.withColumn("POS",CountEmoji(emojis("TWEETS"),lit("POS"))).withColumn("NEG",CountEmoji(emojis("TWEETS"),lit("NEG"))).withColumn("OTHERS",CountEmoji(emojis("TWEETS"),lit("OTHERS"))).withColumn("ADDITIONAL",CountEmoji(emojis("TWEETS"),lit("ADDITIONAL")))
+    emojis = emojis
+      .withColumn("POS",CountEmoji(emojis("TWEETS"),lit("POS")))
+      .withColumn("NEG",CountEmoji(emojis("TWEETS"),lit("NEG")))
+      .withColumn("OTHERS",CountEmoji(emojis("TWEETS"),lit("OTHERS")))
+      .withColumn("ADDITIONAL",CountEmoji(emojis("TWEETS"),lit("ADDITIONAL")))
     emojis.show()
 
     return emojis
