@@ -4,7 +4,11 @@
 		module="maadb-progetto$sbt_2.12"
 		revision="0.1"
 		status="integration"
+<<<<<<< HEAD
 		publication="20181021145226"
+=======
+		publication="20181018231433"
+>>>>>>> tweets-processing
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
