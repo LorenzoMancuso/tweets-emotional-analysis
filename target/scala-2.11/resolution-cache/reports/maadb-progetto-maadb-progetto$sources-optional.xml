@@ -7,11 +7,7 @@
 		revision="0.1"
 		conf="optional"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-<<<<<<< HEAD
-		date="20181021145230"/>
-=======
-		date="20181018231451"/>
->>>>>>> tweets-processing
+		date="20181021163144"/>
 	<dependencies>
 	</dependencies>
 </ivy-report>

@@ -32,8 +32,9 @@ object ScalaApp {
     val sc = new SparkContext(sparkConf)
     sc.setLogLevel("ERROR")
 
-    val preprocessedLexicalRes=LexicalResPreProcessingAlt.PreProcessingAlt(sc)
+    //val preprocessedLexicalRes=LexicalResPreProcessingAlt.PreProcessingAlt(sc)
     UtilsPreProcessing.PreProcessing(sc)
+    TweetsPreProcessing.PreProcessing(sc)
 
     //WriteToMongo(sc,preprocessedLexicalRes)
     //println("write to Mongo executed")

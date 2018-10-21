@@ -4,11 +4,7 @@
 		module="maadb-progetto$sources"
 		revision="0.1"
 		status="integration"
-<<<<<<< HEAD
-		publication="20181021145230"
-=======
-		publication="20181018231451"
->>>>>>> tweets-processing
+		publication="20181021163144"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

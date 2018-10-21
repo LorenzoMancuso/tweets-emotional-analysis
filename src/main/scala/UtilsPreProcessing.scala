@@ -21,36 +21,22 @@ object UtilsPreProcessing {
       .foreach { emoticonsList =>
         tmpFileLines = emoticonsList.toString.split(" = \\[")
         if(tmpFileLines(0) == "EmojiPos"){
-          emojiPos = SplitEmoji(tmpFileLines(1),"u'\\\\U000")
+          emojiPos = SplitEmoji(tmpFileLines(1),"u'\\\\U")
         } else if(tmpFileLines(0) == "EmojiNeg"){
-          emojiNeg = SplitEmoji(tmpFileLines(1),"u'\\\\U000")
+          emojiNeg = SplitEmoji(tmpFileLines(1),"u'\\\\U")
         } else if(tmpFileLines(0) == "OthersEmoji"){
-          othersEmoji = SplitEmoji(tmpFileLines(1),"u'\\\\U000")
+          othersEmoji = SplitEmoji(tmpFileLines(1),"u'\\\\U")
         } else if(tmpFileLines(0) == "AdditionalEmoji"){
           additionalEmoji = SplitEmoji(tmpFileLines(1),"u'\\\\U[+]")
         }
       }
-
-    // Convert our Emojis to Tweet's Emojis.
-    // var castToCheckTweetEmojiVariable = new String(Character.toChars(0x231B))
-
-    /*println(posemoticons)
-    println(negemoticons)
-    println(punctuaction)
-    println(slang)
-    println(stopWords)
-    println(negationWords)
-    println(emojiPos)
-    println(emojiNeg)
-    println(othersEmoji)
-    println(additionalEmoji)*/
 
   }
 
   def SplitEmoji(emojiList:String, regex:String): List[String] ={
     var dataStructure = List[String]()
     emojiList.dropRight(1).split(",").foreach { emoji =>
-      dataStructure = emoji.replaceAll(regex,"0x").replaceAll("\'","")::dataStructure
+      dataStructure = Character.toChars(Integer.parseInt(emoji.replaceAll(regex,"").replaceAll("\'",""),16)).mkString::dataStructure
     }
     return dataStructure
   }

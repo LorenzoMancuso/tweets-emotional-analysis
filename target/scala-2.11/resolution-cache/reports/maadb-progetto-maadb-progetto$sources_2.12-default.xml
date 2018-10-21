@@ -7,11 +7,7 @@
 		revision="0.1"
 		conf="default"
 		confs="default, compile, runtime, test, provided, optional"
-<<<<<<< HEAD
-		date="20181021145229"/>
-=======
-		date="20181018231444"/>
->>>>>>> tweets-processing
+		date="20181021163138"/>
 	<dependencies>
 	</dependencies>
 </ivy-report>
