@@ -36,6 +36,10 @@ object OracleUtils extends indexes {
     //***END ORACLE CONF***
 
     //CALL 3 ORACLE INSERT WITH DIFFERENT QUERIES ON DATASET
+    OracleInsert(df.select(df("FEELING"),df("TOTAL")).distinct,"ALT_MAADB_FEELING",jdbcUrl,connectionProperties)
+    OracleInsert(df.select(df("LEMMA"),df("PERCENTAGE"),df("FEELING")).distinct,"ALT_MAADB_FEELING",jdbcUrl,connectionProperties)
+    OracleInsert(df.select(df("LEXICAL_RESOURCE"),df("COUNT"),df("FEELING"),df("LEMMA")).distinct,"ALT_MAADB_FEELING",jdbcUrl,connectionProperties)
+
   }
 
   def WriteToOracleOld(sc:SparkContext,feelingList:List[Feeling]) :Unit={
