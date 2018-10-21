@@ -4,7 +4,8 @@
     <list default="true" id="0fb7e742-94f1-4168-a09f-5b9a7d09e11c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/modules/MAADB - progetto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/MAADB - progetto.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/LexicalResPreProcessing.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/LexicalResPreProcessing.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/OracleUtils.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/OracleUtils.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/ScalaApp.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ScalaApp.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/.history" beforeDir="false" afterPath="$PROJECT_DIR$/target/.history" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/maadb-progetto/maadb-progetto$sbt_2.12/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/maadb-progetto/maadb-progetto$sbt_2.12/0.1/resolved.xml.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/maadb-progetto/maadb-progetto$sbt_2.12/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/maadb-progetto/maadb-progetto$sbt_2.12/0.1/resolved.xml.xml" afterDir="false" />
@@ -35,7 +36,6 @@
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto$sources_2.12-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto$sources_2.12-runtime.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto$sources_2.12-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/maadb-progetto-maadb-progetto$sources_2.12-test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructureTo/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructureTo/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterDir="false" />
     </list>
@@ -87,30 +87,40 @@
     <session id="1615257854">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="scala" value="2" />
+          <entry key="csv" value="15" />
+          <entry key="sbt" value="1" />
+          <entry key="scala" value="3" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Scala" value="2" />
+          <entry key="PLAIN_TEXT" value="18" />
+          <entry key="Scala" value="3" />
+          <entry key="sbt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="scala" value="1355" />
+          <entry key="csv" value="2" />
+          <entry key="scala" value="4093" />
+          <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Scala" value="1355" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="Scala" value="4093" />
         </counts>
       </usages-collector>
     </session>
@@ -118,10 +128,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.sbt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ScalaApp.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+            <state relative-caret-position="510">
+              <caret line="34" selection-start-line="34" selection-end-line="34" selection-end-column="78" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -132,8 +147,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/OracleUtils.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="62" column="95" selection-start-line="62" selection-start-column="95" selection-end-line="62" selection-end-column="95" />
+            <state relative-caret-position="720">
+              <caret line="99" column="20" lean-forward="true" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -141,11 +156,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/LexicalResPreProcessing.scala">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/LexicalResPreProcessingAlt.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="166" selection-start-line="166" selection-end-line="166" />
+            <state relative-caret-position="684">
+              <caret line="118" selection-start-line="118" selection-end-line="122" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,17 +171,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/MongoUtils.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+            <state relative-caret-position="270">
+              <caret line="18" column="103" selection-start-line="18" selection-start-column="97" selection-end-line="18" selection-end-column="103" />
+              <folding>
+                <element signature="e#0#53#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Script" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>println</find>
+      <find>\t</find>
+      <find>conscore</find>
+      <find>sqlCont</find>
       <find>nice</find>
     </findStrings>
   </component>
@@ -173,9 +204,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/scala/LexicalResPreProcessing.scala" />
+        <option value="$PROJECT_DIR$/RESULTS/result_Thu_Oct_18_21:04:41_CEST_2018.txt" />
+        <option value="$PROJECT_DIR$/DATASET/Risorse-lessicali/ConScore/afinn.txt" />
+        <option value="$PROJECT_DIR$/RESULTS/part-00000-eec6bec7-6b72-43ff-a286-c6ef6ba08a8d-c000.csv" />
+        <option value="$PROJECT_DIR$/src/main/scala/LexicalResPreProcessingAlt.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/MongoUtils.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ScalaApp.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/OracleUtils.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/LexicalResPreProcessing.scala" />
       </list>
     </option>
   </component>
@@ -185,8 +221,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="961" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="27" />
     <option name="width" value="959" />
     <option name="height" value="1052" />
@@ -197,6 +232,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -204,6 +240,11 @@
             <path>
               <item name="MAADB - progetto" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAADB-scala_spark" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAADB - progetto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAADB-scala_spark" type="462c0819:PsiDirectoryNode" />
+              <item name="RESULTS" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MAADB - progetto" type="b2602c69:ProjectViewProjectNode" />
@@ -227,14 +268,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/luca-laudiero/Scrivania/Universita/MAADB/MAADB-scala_spark/RESULTS/result_Thu_Oct_18_09:32:02_CEST_2018.txt" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539848889078" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539970825751" />
     <property name="last_opened_file_path" value="/usr/lib/ojdbc6.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -317,18 +357,20 @@
       <updated>1539846694710</updated>
       <workItem from="1539846697543" duration="2172000" />
       <workItem from="1539854333736" duration="9410000" />
-      <workItem from="1539879455401" duration="1378000" />
+      <workItem from="1539879455401" duration="13766000" />
+      <workItem from="1539934547988" duration="16687000" />
+      <workItem from="1540126327768" duration="919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12960000" />
+    <option name="totallyTimeSpent" value="42954000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25506938" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.26040554" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -370,54 +412,75 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RESULTS/result_Thu_Oct_18_09:32:02_CEST_2018.txt">
+    <entry file="file://$PROJECT_DIR$/RESULTS/result_Thu_Oct_18_09:32:02_CEST_2018.txt" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/result_Thu_Oct_18_09:39:44_CEST_2018.txt" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/result_Thu_Oct_18_09:47:32_CEST_2018.txt" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/result_Thu_Oct_18_21:04:41_CEST_2018.txt" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-c982e192-2bf0-4bbf-85f4-61d21a1e7e2c-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-91a01656-10c7-4c78-83bf-e61717b7e254-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-f25d7830-5365-4ac0-8ff9-1c221a197f4d-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-dc412f59-9e48-4eab-a185-40f2f10b0312-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-e5e2662a-cf93-4e02-b7c8-c8f5d7e61361-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/DATASET/Risorse-lessicali/ConScore/afinn.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="33727" column="13" selection-start-line="33727" selection-start-column="9" selection-end-line="33727" selection-end-column="13" />
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RESULTS/result_Thu_Oct_18_09:39:44_CEST_2018.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RESULTS/result_Thu_Oct_18_09:47:32_CEST_2018.txt">
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-274ba8f6-cea1-4e75-9e92-f24cb02beda2-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-a2daf798-5f94-4e22-bd43-1e20aa31042d-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-025fbc46-2ab2-4b4f-9f68-390c2b89fc8a-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-e1c9e0dc-cdf8-4235-8f69-cda5aa7bfb52-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-1b5ef0bb-9fc8-4ec7-8bd1-733c02962ce5-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-01de2328-8b18-4108-95a5-a1ae7e4b21ad-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-464afd98-ba59-494c-810f-3da5598ab649-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-eec6bec7-6b72-43ff-a286-c6ef6ba08a8d-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-c159cfc1-ca4e-45e0-ba2b-c93781a3d482-c000.csv" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/LexicalResPreProcessing.scala" />
+    <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/ScalaApp.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/RESULTS/part-00000-82977edf-aa0c-479d-95e4-1e95e2a86512-c000.csv">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/OracleUtils.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="62" column="95" selection-start-line="62" selection-start-column="95" selection-end-line="62" selection-end-column="95" />
+        <state relative-caret-position="720">
+          <caret line="99" column="20" lean-forward="true" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/MongoUtils.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/LexicalResPreProcessingAlt.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        <state relative-caret-position="684">
+          <caret line="118" selection-start-line="118" selection-end-line="122" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/LexicalResPreProcessing.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/MongoUtils.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="166" selection-start-line="166" selection-end-line="166" />
+        <state relative-caret-position="270">
+          <caret line="18" column="103" selection-start-line="18" selection-start-column="97" selection-end-line="18" selection-end-column="103" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/ScalaApp.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" selection-start-line="34" selection-end-line="34" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/lore/Universita/MAADB-scala_spark/src/main/scala/OracleUtils.scala:58:12: too many arguments for method println: (x: Any)Unit[0m
-[0m[[0m[31merror[0m] [0m[0m    println(tmpLexRes.length, tmpLexRes.collect()(0))[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/lore/Universita/MAADB-scala_spark/src/main/scala/LexicalResPreProcessingAlt.scala:58:47: Int.type does not take parameters[0m
+[0m[[0m[31merror[0m] [0m[0m    scores=scores.withColumn("PERCENTAGE", Int(-1))[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
