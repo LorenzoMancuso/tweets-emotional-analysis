@@ -13,7 +13,6 @@ object LexicalResPreProcessingAlt{
      |-- TOTAL: long (nullable = true)
      |-- TOTAL_LEMMA: long (nullable = true)
      |-- PERCENTAGE: double (nullable = true)*/
-
   def PreProcessingAlt(sc: SparkContext): DataFrame ={
     val sqlContext:SparkSession = SparkSession
       .builder()
@@ -53,14 +52,9 @@ object LexicalResPreProcessingAlt{
         scores = scores.union(ReadScores(path, lr, "ConScore", sc, sqlContext))
       }
     }
-
-    //println("schema with scores")
     scores=df.join(scores,"LEMMA").select(df("FEELING"),df("LEMMA"),scores("LEXICAL_RESOURCE"),scores("COUNT"),df("PERCENTAGE"))
     df=df.union(scores)
-
-    //df.printSchema()
     return df
-    //PrintToCSV(df)
   }
 
   def GetListOfSubDirectories(directoryName: String): Array[String] = {

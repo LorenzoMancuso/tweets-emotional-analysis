@@ -2,10 +2,10 @@ import java.io.File
 
 import org.apache.spark.sql.functions.udf
 import org.apache.spark.sql.functions.lit
+import org.apache.spark.sql.functions.explode
 import org.apache.commons.lang.StringUtils
 import org.apache.spark.SparkContext
-import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.{Column, DataFrame, SparkSession}
+import org.apache.spark.sql.{DataFrame, SparkSession}
 
 object TweetsPreProcessing{
 
@@ -27,14 +27,12 @@ object TweetsPreProcessing{
       }
     }
 
-    //println("count emojis")
-    //var emojis = CountEmojiHelper(tweets, sqlContext)
+    println("count emojis")
+    var emojis = CountEmojiHelper(tweets, sqlContext)
 
-    /*
-    FEELING: String
-    HASHTAG: String
-    COUNT: Int
-     */
+    // clean punctuation
+    import sqlContext.implicits._
+    tweets=tweets.as[(String,String)].map(t=>(t._1,CleanTweet(t._2:String))).toDF
 
     println("count hashtags")
     var hashtags:DataFrame = CountHashtagsHelper(tweets, sqlContext, sc)
@@ -42,11 +40,9 @@ object TweetsPreProcessing{
 
   def CountHashtagsHelper(tweets:DataFrame, sqlContext:SparkSession, sc:SparkContext): DataFrame = {
     import sqlContext.implicits._
-    var hashtags = tweets.map(x=>(x.getString(0),x.getString(1),
-      sc.parallelize(x.getString(1).split(" ").filter(_.contains("#"))).map(x=>(x,1)).reduceByKey(_+_).collect())
-    ).toDF("FEELING","TWEETS","HASHTAGS")
-    hashtags.printSchema()
 
+    var hashtags = tweets.map(row=>(row.getString(0),row.getString(1).split(" ").filter(_.contains("#")))).toDF("FEELING","HASHTAGS_LIST")
+    hashtags=hashtags.withColumn("HASHTAG", explode(hashtags("HASHTAGS_LIST"))).drop("HASHTAGS_LIST").groupBy("FEELING","HASHTAG").count()
 
     return hashtags
   }
@@ -55,43 +51,42 @@ object TweetsPreProcessing{
     import sqlContext.implicits._
     println("read tweets ",path+filename)
     val tokenized = sc.wholeTextFiles(path+filename)
-      .map(t=>(feelingName,CleanTweet(t._2:String)))
+      //.map(t=>(feelingName,CleanTweet(t._2:String)))
       .toDF("FEELING","TWEETS")
     return tokenized
   }
 
   def CleanTweet(tweet:String):String={
     var res=tweet
-    //eliminare punteggiatura
-    res=StringUtils.replaceEach(res, UtilsPreProcessing.punctuaction.toArray, Array.fill[String](UtilsPreProcessing.punctuaction.length)(""))
+    res=StringUtils.replaceEach(res, UtilsPreProcessing.punctuaction.toArray, Array.fill[String](UtilsPreProcessing.punctuaction.length)(""))//eliminare punteggiatura
     res=res.split(" ")
       .filter(word=> !word.contains("USERNAME") && !word.contains("URL") && UtilsPreProcessing.stopWords.indexOf(word) == -1) //eliminare stop words
       .map(word=>UtilsPreProcessing.slang.getOrElse(word,word)) //sostituire slang
-      .mkString(" ").trim().replaceAll(" +", " ")
+      .mkString(" ").trim().replaceAll(" +", " ") //remove double spaces
     return res
   }
 
   def CountEmojiHelper(tweets:DataFrame, sqlContext:SparkSession): DataFrame = {
-    import sqlContext.implicits._
-    var emojis = tweets;
+    var emojis = tweets
     emojis = emojis
       .withColumn("POS",CountEmoji(emojis("TWEETS"),lit("POS")))
       .withColumn("NEG",CountEmoji(emojis("TWEETS"),lit("NEG")))
       .withColumn("OTHERS",CountEmoji(emojis("TWEETS"),lit("OTHERS")))
       .withColumn("ADDITIONAL",CountEmoji(emojis("TWEETS"),lit("ADDITIONAL")))
-    emojis.show()
-
+      .withColumn("EMOTICON_POS",CountEmoji(emojis("TWEETS"),lit("EMO_POS")))
+      .withColumn("EMOTICON_NEG",CountEmoji(emojis("TWEETS"),lit("EMO_NEG")))
     return emojis
   }
 
   def CountEmoji = udf((tweets: String, emojiType:String) => Option[Int] {
-    var emojis = List[String]();
+    var emojis = List[String]()
     if(emojiType == "POS") { emojis = UtilsPreProcessing.emojiPos }
     else if(emojiType == "NEG") { emojis = UtilsPreProcessing.emojiNeg }
     else if(emojiType == "OTHERS") { emojis = UtilsPreProcessing.othersEmoji }
     else if(emojiType == "ADDITIONAL") { emojis = UtilsPreProcessing.additionalEmoji }
-
-    tweets.split(" ").filter(emoji => emojis.indexOf(emoji)!= -1).size
+    else if(emojiType == "EMO_POS") { emojis = UtilsPreProcessing.posemoticons}
+    else if(emojiType == "EMO_NEG") { emojis = UtilsPreProcessing.negemoticons }
+    tweets.split(" ").count(emoji => emojis.indexWhere(_.contains(emoji))!= -1)
   })
 
   def GetFileList(path:String): List[String]={
