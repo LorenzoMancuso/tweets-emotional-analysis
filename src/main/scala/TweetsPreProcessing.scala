@@ -9,7 +9,7 @@ import org.apache.spark.sql.{DataFrame, SparkSession}
 
 object TweetsPreProcessing{
 
-  def PreProcessing(sc:SparkContext): Unit ={
+  def PreProcessing(sc:SparkContext): DataFrame ={
     val path:String="./DATASET/Tweets/"
     val sqlContext:SparkSession = SparkSession
       .builder()
@@ -26,6 +26,9 @@ object TweetsPreProcessing{
         tweets=tweets.union(ReadFile(path,fileName,fileName.split("_")(2),sc,sqlContext))
       }
     }
+    
+    println("count hashtags")
+    var hashtags:DataFrame = CountHashtagsHelper(tweets, sqlContext, sc)
 
     println("count emojis")
     var emojis = CountEmojiHelper(tweets, sqlContext)
@@ -34,8 +37,8 @@ object TweetsPreProcessing{
     import sqlContext.implicits._
     tweets=tweets.as[(String,String)].map(t=>(t._1,CleanTweet(t._2:String))).toDF
 
-    println("count hashtags")
-    var hashtags:DataFrame = CountHashtagsHelper(tweets, sqlContext, sc)
+
+    return tweets.toDF("FEELING","TWEETS")
   }
 
   def CountHashtagsHelper(tweets:DataFrame, sqlContext:SparkSession, sc:SparkContext): DataFrame = {
@@ -51,17 +54,18 @@ object TweetsPreProcessing{
     import sqlContext.implicits._
     println("read tweets ",path+filename)
     val tokenized = sc.wholeTextFiles(path+filename)
-      //.map(t=>(feelingName,CleanTweet(t._2:String)))
+      .map(t=>(feelingName,t._2:String))
       .toDF("FEELING","TWEETS")
     return tokenized
   }
 
   def CleanTweet(tweet:String):String={
     var res=tweet
-    res=StringUtils.replaceEach(res, UtilsPreProcessing.punctuaction.toArray, Array.fill[String](UtilsPreProcessing.punctuaction.length)(""))//eliminare punteggiatura
+    res=StringUtils.replaceEach(res, UtilsPreProcessing.punctuaction.toArray, Array.fill[String](UtilsPreProcessing.punctuaction.length)(" "))//eliminare punteggiatura
     res=res.split(" ")
-      .filter(word=> !word.contains("USERNAME") && !word.contains("URL") && UtilsPreProcessing.stopWords.indexOf(word) == -1) //eliminare stop words
-      .map(word=>UtilsPreProcessing.slang.getOrElse(word,word)) //sostituire slang
+      .filter(word=> !word.contains("USERNAME") && !word.contains("URL") /*&& UtilsPreProcessing.stopWords.indexOf(word) == -1*/) //eliminare parole anonimizzate USERNAME e URL
+      .map(word=>UtilsPreProcessing.slang.getOrElse(word,word.toLowerCase).toLowerCase)//sostituire slang
+      .filter(UtilsPreProcessing.stopWords.indexOf(_) == -1) //eliminare stop words
       .mkString(" ").trim().replaceAll(" +", " ") //remove double spaces
     return res
   }

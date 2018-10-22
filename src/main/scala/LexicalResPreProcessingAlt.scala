@@ -13,7 +13,7 @@ object LexicalResPreProcessingAlt{
      |-- TOTAL: long (nullable = true)
      |-- TOTAL_LEMMA: long (nullable = true)
      |-- PERCENTAGE: double (nullable = true)*/
-  def PreProcessingAlt(sc: SparkContext): DataFrame ={
+  def PreProcessing(sc: SparkContext): DataFrame ={
     val sqlContext:SparkSession = SparkSession
       .builder()
       .appName("MAADB - progetto")
@@ -74,6 +74,7 @@ object LexicalResPreProcessingAlt{
   }
 
   def ReadFile(path:String,filename:String, feelingName: String, sc:SparkContext, sqlContext:SparkSession): DataFrame ={
+    println("read lexical res ",path+feelingName+"/"+filename)
     import sqlContext.implicits._
     val tokenized = sc.textFile(path+feelingName+"/"+filename)
       .flatMap(_.split(" "))
@@ -86,6 +87,7 @@ object LexicalResPreProcessingAlt{
   }
 
   def ReadScores(path:String,filename:String, feelingName: String, sc:SparkContext, sqlContext:SparkSession): DataFrame ={
+    println("read score ",path+feelingName+"/"+filename)
     import sqlContext.implicits._
     val tokenized = sc.textFile(path+feelingName+"/"+filename)
       .flatMap(_.split("\n"))
