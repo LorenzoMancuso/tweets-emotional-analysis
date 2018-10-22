@@ -7,8 +7,32 @@
 		revision="0.1"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20181022112018"/>
+		date="20181022181439"/>
 	<dependencies>
+		<module organisation="com.vdurmont" name="emoji-java">
+			<revision name="4.0.0" status="release" pubdate="20171029021339" resolver="public" artresolver="public" homepage="https://github.com/vdurmont/emoji-java" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="164">
+				<license name="The MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="successful" details="" size="5892" time="112" location="/home/lore/.ivy2/cache/com.vdurmont/emoji-java/ivy-4.0.0.xml" searched="true" original-local-location="/home/lore/.ivy2/cache/com.vdurmont/emoji-java/ivy-4.0.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/vdurmont/emoji-java/4.0.0/emoji-java-4.0.0.pom"/>
+				<caller organisation="maadb-progetto" name="maadb-progetto_2.11" conf="compile" rev="4.0.0" rev-constraint-default="4.0.0" rev-constraint-dynamic="4.0.0" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="emoji-java" type="jar" ext="jar" status="successful" details="" size="58996" time="387" location="/home/lore/.ivy2/cache/com.vdurmont/emoji-java/jars/emoji-java-4.0.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/vdurmont/emoji-java/4.0.0/emoji-java-4.0.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.json" name="json">
+			<revision name="20170516" status="release" pubdate="20170516214241" resolver="public" artresolver="public" homepage="https://github.com/douglascrockford/JSON-java" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="165">
+				<license name="The JSON License" url="http://json.org/license.html"/>
+				<metadata-artifact status="successful" details="" size="5671" time="109" location="/home/lore/.ivy2/cache/org.json/json/ivy-20170516.xml" searched="true" original-local-location="/home/lore/.ivy2/cache/org.json/json/ivy-20170516.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json/json/20170516/json-20170516.pom"/>
+				<caller organisation="com.vdurmont" name="emoji-java" conf="default, compile, runtime, master" rev="20170516" rev-constraint-default="20170516" rev-constraint-dynamic="20170516" callerrev="4.0.0"/>
+				<artifacts>
+					<artifact name="json" type="bundle" ext="jar" status="successful" details="" size="57264" time="169" location="/home/lore/.ivy2/cache/org.json/json/bundles/json-20170516.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/json/json/20170516/json-20170516.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="net.liftweb" name="lift-json_2.11">
 			<revision name="2.6.3" status="release" pubdate="20160131062433" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.liftweb.net" downloaded="false" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="163">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>

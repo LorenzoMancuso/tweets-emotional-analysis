@@ -6,6 +6,7 @@ import org.apache.spark.sql.functions.explode
 import org.apache.commons.lang.StringUtils
 import org.apache.spark.SparkContext
 import org.apache.spark.sql.{DataFrame, SparkSession}
+import com.vdurmont.emoji._
 
 object TweetsPreProcessing{
 
@@ -26,48 +27,34 @@ object TweetsPreProcessing{
         tweets=tweets.union(ReadFile(path,fileName,fileName.split("_")(2),sc,sqlContext))
       }
     }
-    
-    println("count hashtags")
-    var hashtags:DataFrame = CountHashtagsHelper(tweets, sqlContext, sc)
 
-    println("count emojis")
-    var emojis = CountEmojiHelper(tweets, sqlContext)
-
-    // clean punctuation
     import sqlContext.implicits._
-    tweets=tweets.as[(String,String)].map(t=>(t._1,CleanTweet(t._2:String))).toDF
+    //sostituire slang
+    tweets=tweets.map(row=>(row.getString(0),UtilsPreProcessing.slang.getOrElse(row.getString(1),row.getString(1).toLowerCase).toLowerCase)).toDF()
 
+    //tokenized tweets
+    var splittedTweets=tweets.map(row=>(row.getString(0),row.getString(1).split(" "))).toDF("FEELING","TWEETS_WORDS_LIST")
+    splittedTweets=splittedTweets.withColumn("LEMMA", explode(splittedTweets("TWEETS_WORDS_LIST"))).drop("TWEETS_WORDS_LIST")
 
-    return tweets.toDF("FEELING","TWEETS")
-  }
+    //rimuove parole anonimizzate USERNAME e URL
+    splittedTweets=splittedTweets.filter(word=> !word.getString(1).contains("USERNAME") && !word.getString(1).contains("URL"))
 
-  def CountHashtagsHelper(tweets:DataFrame, sqlContext:SparkSession, sc:SparkContext): DataFrame = {
-    import sqlContext.implicits._
+    var hashtags = splittedTweets.filter(_.getString(1).contains("#"))
+    //remove all hashtags
+    splittedTweets=splittedTweets.except(hashtags)
+    hashtags=hashtags.groupBy("FEELING","LEMMA").count()
 
-    var hashtags = tweets.map(row=>(row.getString(0),row.getString(1).split(" ").filter(_.contains("#")))).toDF("FEELING","HASHTAGS_LIST")
-    hashtags=hashtags.withColumn("HASHTAG", explode(hashtags("HASHTAGS_LIST"))).drop("HASHTAGS_LIST").groupBy("FEELING","HASHTAG").count()
+    //count emojis and emoticons
+    var emojis = CountEmojiHelper(tweets.toDF("FEELING","TWEETS"), sqlContext)
 
-    return hashtags
-  }
+    //remove all emoticons
+    splittedTweets=splittedTweets.filter(row=>(UtilsPreProcessing.posemoticons.indexWhere(_.contains(row.getString(1)))== -1
+      && UtilsPreProcessing.negemoticons.indexWhere(_.contains(row.getString(1)))== -1))
 
-  def ReadFile(path:String,filename:String, feelingName: String, sc:SparkContext, sqlContext:SparkSession): DataFrame ={
-    import sqlContext.implicits._
-    println("read tweets ",path+filename)
-    val tokenized = sc.wholeTextFiles(path+filename)
-      .map(t=>(feelingName,t._2:String))
-      .toDF("FEELING","TWEETS")
-    return tokenized
-  }
+    // clean emoji, punctuation, stop words and spaces - filter for empty string
+    splittedTweets=splittedTweets.as[(String,String)].map(t=>(t._1,CleanTweet(t._2:String))).filter(_._2!="").toDF("FEELING","LEMMA")
 
-  def CleanTweet(tweet:String):String={
-    var res=tweet
-    res=StringUtils.replaceEach(res, UtilsPreProcessing.punctuaction.toArray, Array.fill[String](UtilsPreProcessing.punctuaction.length)(" "))//eliminare punteggiatura
-    res=res.split(" ")
-      .filter(word=> !word.contains("USERNAME") && !word.contains("URL") /*&& UtilsPreProcessing.stopWords.indexOf(word) == -1*/) //eliminare parole anonimizzate USERNAME e URL
-      .map(word=>UtilsPreProcessing.slang.getOrElse(word,word.toLowerCase).toLowerCase)//sostituire slang
-      .filter(UtilsPreProcessing.stopWords.indexOf(_) == -1) //eliminare stop words
-      .mkString(" ").trim().replaceAll(" +", " ") //remove double spaces
-    return res
+    return splittedTweets
   }
 
   def CountEmojiHelper(tweets:DataFrame, sqlContext:SparkSession): DataFrame = {
@@ -90,8 +77,26 @@ object TweetsPreProcessing{
     else if(emojiType == "ADDITIONAL") { emojis = UtilsPreProcessing.additionalEmoji }
     else if(emojiType == "EMO_POS") { emojis = UtilsPreProcessing.posemoticons}
     else if(emojiType == "EMO_NEG") { emojis = UtilsPreProcessing.negemoticons }
-    tweets.split(" ").count(emoji => emojis.indexWhere(_.contains(emoji))!= -1)
+    tweets.split(" ").count(emoji => emojis.indexWhere(_.contains(emoji))!= -1)//indexOf with like clause
   })
+
+  def ReadFile(path:String,filename:String, feelingName: String, sc:SparkContext, sqlContext:SparkSession): DataFrame ={
+    import sqlContext.implicits._
+    println("read tweets ",path+filename)
+    val tokenized = sc.wholeTextFiles(path+filename)
+      .map(t=>(feelingName,t._2:String))
+      .toDF("FEELING","TWEETS")
+    return tokenized
+  }
+
+  def CleanTweet(tweet:String):String={
+    var res=tweet
+    res=EmojiParser.removeAllEmojis(res)
+    res=StringUtils.replaceEach(res, UtilsPreProcessing.punctuaction.toArray, Array.fill[String](UtilsPreProcessing.punctuaction.length)(" "))//eliminare punteggiatura
+    if(UtilsPreProcessing.stopWords.indexOf(res) != -1) {res=""}//eliminare stop words
+    res=res.replaceAll(" ","").replaceAll("\n","")
+    return res
+  }
 
   def GetFileList(path:String): List[String]={
     val d = new File(path)

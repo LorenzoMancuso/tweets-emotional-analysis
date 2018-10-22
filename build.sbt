@@ -10,5 +10,6 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % sparkVersion,
   "org.apache.spark" %% "spark-sql" % sparkVersion,
   "org.mongodb.spark" %% "mongo-spark-connector" % "2.2.1",
-  "net.liftweb" %% "lift-json" % "2.6+"
+  "net.liftweb" %% "lift-json" % "2.6+",
+  "com.vdurmont" % "emoji-java" % "4.0.0"
 )

@@ -9,12 +9,8 @@ object TweetsProcessing{
       .master("local[*]")
       .getOrCreate()
 
-    lexicalRes.printSchema()
-    tweets.printSchema()
-
     import sqlContext.implicits._
-    var splittedTweets=tweets.map(row=>(row.getString(0),row.getString(1).split(" ").filter(word=> !word.contains("#") && !word.contains("[^\u0000-\uFFFF]")))).toDF("FEELING","TWEETS_WORDS_LIST")//[^\u0000-\uFFFF]
-    splittedTweets=splittedTweets.withColumn("LEMMA", explode(splittedTweets("TWEETS_WORDS_LIST"))).drop("TWEETS_WORDS_LIST").groupBy("FEELING","LEMMA").count()
+    var splittedTweets:DataFrame=tweets.groupBy("FEELING","LEMMA").count()
 
     lexicalRes.createOrReplaceTempView("lexicalRes")
     splittedTweets.createOrReplaceTempView("splittedTweets")
@@ -26,11 +22,29 @@ object TweetsProcessing{
     )
 
     var newWord=sqlContext.sql(
-      "SELECT DISTINCT splittedTweets.FEELING,splittedTweets.LEMMA,splittedTweets.COUNT AS FREQUENCY " +
+      "SELECT DISTINCT splittedTweets.FEELING,splittedTweets.LEMMA, NULL AS LEXICAL_RESOURCE, NULL AS COUNT, NULL AS PERCENTAGE, splittedTweets.COUNT AS FREQUENCY " +
         "FROM splittedTweets LEFT JOIN lexicalRes ON LOWER(splittedTweets.LEMMA) = LOWER(lexicalRes.LEMMA) " +
-        "WHERE lexicalRes.LEMMA is null " +
+        "WHERE lexicalRes.LEMMA is null AND LENGTH(splittedtweets.LEMMA) > 2 AND splittedTweets.COUNT>10 " +
         "ORDER BY 3 DESC"
     )
-    newWord.show()
+
+    println("lexicalRes rows: ",lexicalRes.collect().length)
+    //PrintToCSV(newWord)
+    result.printSchema()
+    println("result rows: ",result.collect().length)
+    newWord.printSchema()
+    println("newWord rows: ",newWord.collect().length)
+
+    result=result.union(newWord)
+    PrintToCSV(result)
+  }
+
+  def PrintToCSV(df: DataFrame): Unit ={
+    println("start writing")
+    df.coalesce(1)         // Writes to a single file
+      .write
+      .mode("overwrite")
+      .format("csv")
+      .save("./RESULTS/")
   }
 }
