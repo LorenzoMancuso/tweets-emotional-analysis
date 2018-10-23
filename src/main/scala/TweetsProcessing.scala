@@ -1,8 +1,9 @@
+import org.apache.spark.SparkContext
 import org.apache.spark.sql.functions.explode
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
 object TweetsProcessing{
-  def Processing(lexicalRes:DataFrame,tweets:DataFrame): Unit ={
+  def Processing(lexicalRes:DataFrame,tweets:DataFrame,sc:SparkContext): Unit ={
     val sqlContext:SparkSession = SparkSession
       .builder()
       .appName("MAADB - progetto")
@@ -17,7 +18,8 @@ object TweetsProcessing{
     var result=sqlContext.sql(
       "SELECT DISTINCT lexicalRes.*,splittedTweets.COUNT AS FREQUENCY " +
         "FROM lexicalRes LEFT JOIN splittedTweets " +
-        "ON lexicalRes.FEELING in ('Pos','Neg','Like-Love','Hope') OR LOWER(lexicalRes.FEELING) LIKE LOWER(CONCAT('%',splittedTweets.FEELING,'%'))" + //controls on FEELING
+        //"ON lexicalRes.FEELING in ('Pos','Neg','Like-Love','Hope') OR LOWER(lexicalRes.FEELING) LIKE LOWER(CONCAT('%',splittedTweets.FEELING,'%'))" + //controls on FEELING
+        "ON LOWER(lexicalRes.FEELING) LIKE LOWER(CONCAT('%',splittedTweets.FEELING,'%'))" + //controls on FEELING
         "AND LOWER(lexicalRes.LEMMA) = LOWER(splittedTweets.LEMMA)" //controls on LEMMA
     )
 
@@ -28,15 +30,13 @@ object TweetsProcessing{
         "ORDER BY 3 DESC"
     )
 
-    println("lexicalRes rows: ",lexicalRes.collect().length)
-    //PrintToCSV(newWord)
     result.printSchema()
-    println("result rows: ",result.collect().length)
     newWord.printSchema()
-    println("newWord rows: ",newWord.collect().length)
 
     result=result.union(newWord)
-    PrintToCSV(result)
+    //PrintToCSV(result)
+
+    MongoUtils.WriteToMongo(sc,result)
   }
 
   def PrintToCSV(df: DataFrame): Unit ={
