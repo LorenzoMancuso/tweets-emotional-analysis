@@ -3,7 +3,7 @@ import org.apache.spark.sql.functions.explode
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
 object TweetsProcessing{
-  def Processing(lexicalRes:DataFrame,tweets:DataFrame,sc:SparkContext): Unit ={
+  def Processing(lexicalRes:DataFrame,tweets:DataFrame,sc:SparkContext): DataFrame ={
     val sqlContext:SparkSession = SparkSession
       .builder()
       .appName("MAADB - progetto")
@@ -11,7 +11,7 @@ object TweetsProcessing{
       .getOrCreate()
 
     import sqlContext.implicits._
-    var splittedTweets:DataFrame=tweets.groupBy("FEELING","LEMMA").count()
+    var splittedTweets:DataFrame=tweets
 
     lexicalRes.createOrReplaceTempView("lexicalRes")
     splittedTweets.createOrReplaceTempView("splittedTweets")
@@ -24,19 +24,15 @@ object TweetsProcessing{
     )
 
     var newWord=sqlContext.sql(
-      "SELECT DISTINCT splittedTweets.FEELING,splittedTweets.LEMMA, NULL AS LEXICAL_RESOURCE, NULL AS COUNT, NULL AS PERCENTAGE, splittedTweets.COUNT AS FREQUENCY " +
-        "FROM splittedTweets LEFT JOIN lexicalRes ON LOWER(splittedTweets.LEMMA) = LOWER(lexicalRes.LEMMA) " +
+      "SELECT DISTINCT splittedTweets.FEELING,splittedTweets.LEMMA, 0 AS LEXICAL_RESOURCE, 0 AS COUNT, 0 AS PERCENTAGE, splittedTweets.COUNT AS FREQUENCY " +
+        "FROM splittedTweets " +
+        "LEFT JOIN lexicalRes ON LOWER(splittedTweets.LEMMA) = LOWER(lexicalRes.LEMMA) " +
         "WHERE lexicalRes.LEMMA is null AND LENGTH(splittedtweets.LEMMA) > 2 AND splittedTweets.COUNT>10 " +
         "ORDER BY 3 DESC"
     )
 
-    result.printSchema()
-    newWord.printSchema()
-
     result=result.union(newWord)
-    //PrintToCSV(result)
-
-    MongoUtils.WriteToMongo(sc,result)
+    return result
   }
 
   def PrintToCSV(df: DataFrame): Unit ={

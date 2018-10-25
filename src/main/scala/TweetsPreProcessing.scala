@@ -52,7 +52,12 @@ object TweetsPreProcessing{
       && UtilsPreProcessing.negemoticons.indexWhere(_.contains(row.getString(1)))== -1))
 
     // clean emoji, punctuation, stop words and spaces - filter for empty string
-    splittedTweets=splittedTweets.as[(String,String)].map(t=>(t._1,CleanTweet(t._2:String))).filter(_._2!="").toDF("FEELING","LEMMA")
+    splittedTweets=splittedTweets.as[(String,String)]
+      .map(t=>(t._1.replaceAll("disgust","disgust-hate"),CleanTweet(t._2:String)))
+      .filter(_._2!="")
+      .toDF("FEELING","LEMMA")
+      .groupBy("FEELING","LEMMA")
+      .count()
 
     return splittedTweets
   }
@@ -84,7 +89,7 @@ object TweetsPreProcessing{
     import sqlContext.implicits._
     println("read tweets ",path+filename)
     val tokenized = sc.wholeTextFiles(path+filename)
-      .map(t=>(feelingName,t._2:String))
+      .map(t=>(feelingName.toLowerCase,t._2.toLowerCase:String))
       .toDF("FEELING","TWEETS")
     return tokenized
   }

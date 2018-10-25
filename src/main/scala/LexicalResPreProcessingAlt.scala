@@ -78,7 +78,7 @@ object LexicalResPreProcessingAlt{
     import sqlContext.implicits._
     val tokenized = sc.textFile(path+feelingName+"/"+filename)
       .flatMap(_.split(" "))
-      .map((feelingName,_,CleanLRName(filename)))
+      .map(x=>(feelingName.toLowerCase,x.toLowerCase,CleanLRName(filename).toLowerCase))
       .toDF("FEELING","LEMMA","LEXICAL_RESOURCE")
       .filter(!$"LEMMA".contains("_"))
       .groupBy("FEELING","LEMMA","LEXICAL_RESOURCE")
@@ -91,7 +91,7 @@ object LexicalResPreProcessingAlt{
     import sqlContext.implicits._
     val tokenized = sc.textFile(path+feelingName+"/"+filename)
       .flatMap(_.split("\n"))
-      .map(x=>(feelingName,x.split("\t")(0),CleanScoreName(filename),x.split("\t")(1)))
+      .map(x=>(feelingName.toLowerCase,x.split("\t")(0).toLowerCase,CleanScoreName(filename).toLowerCase,x.split("\t")(1)))
       .toDF("FEELING","LEMMA","LEXICAL_RESOURCE","COUNT")
     return tokenized
   }

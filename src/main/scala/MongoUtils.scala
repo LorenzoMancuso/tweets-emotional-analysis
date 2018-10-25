@@ -18,6 +18,7 @@ object MongoUtils{
     sqlContext.sql("select FEELING,LEMMA,PERCENTAGE,FREQUENCY, collect_list(struct(LEXICAL_RESOURCE,count)) as lexicalRes from tmp group by FEELING,LEMMA,PERCENTAGE,FREQUENCY").createOrReplaceTempView("tmp")
     val res=sqlContext.sql("select FEELING, collect_list(struct(LEMMA,PERCENTAGE,FREQUENCY,lexicalRes)) as lemmas from tmp group by FEELING")
     res.printSchema()
+
     /*val tmp=res.toJSON.collect
     println("DataFrame parsed to JSON array")
     val doc=tmp.map(Document.parse)
