@@ -3,7 +3,7 @@ import org.apache.spark.SparkConf
 import java.io.File
 import java.util.Date
 
-import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.{DataFrame, SparkSession}
 // PrintWriter
 import java.io._
 import MongoUtils._
@@ -32,15 +32,20 @@ object ScalaApp {
     val sc = new SparkContext(sparkConf)
     sc.setLogLevel("ERROR")
 
-    //val preprocessedLexicalRes=LexicalResPreProcessingAlt.PreProcessingAlt(sc)
     UtilsPreProcessing.PreProcessing(sc)
-    TweetsPreProcessing.PreProcessing(sc)
+    println("Utils preprocessing done")
+    val lexicalRes=LexicalResPreProcessingAlt.PreProcessing(sc)
+    println("Lexical Res preprocessing done")
+    val tweets=TweetsPreProcessing.PreProcessing(sc)
+    println("Tweets preprocessing done")
+    val result=TweetsProcessing.Processing(lexicalRes,tweets,sc)
+    println("Final data processing done")
 
-    //WriteToMongo(sc,preprocessedLexicalRes)
-    //println("write to Mongo executed")
+    WriteToMongo(sc,result)
+    println("write to Mongo executed")
 
-    //WriteToOracle(sc,preprocessedLexicalRes)
-    //println("write to Oracle executed")
+    WriteToOracle(sc,result)
+    println("write to Oracle executed")
   }
 
 }

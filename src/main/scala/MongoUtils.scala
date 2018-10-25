@@ -15,9 +15,18 @@ object MongoUtils{
       .getOrCreate()
     import sqlContext.implicits._
     df.createOrReplaceTempView("tmp")
-    sqlContext.sql("select FEELING,LEMMA,PERCENTAGE, collect_list(struct(LEXICAL_RESOURCE,count)) as lexicalRes from tmp group by FEELING,LEMMA,PERCENTAGE").createOrReplaceTempView("tmp")
-    val res=sqlContext.sql("select FEELING, collect_list(struct(LEMMA,PERCENTAGE,lexicalRes)) as lemmas from tmp group by FEELING").toJSON.collect
+    sqlContext.sql("select FEELING,LEMMA,PERCENTAGE,FREQUENCY, collect_list(struct(LEXICAL_RESOURCE,count)) as lexicalRes from tmp group by FEELING,LEMMA,PERCENTAGE,FREQUENCY").createOrReplaceTempView("tmp")
+    val res=sqlContext.sql("select FEELING, collect_list(struct(LEMMA,PERCENTAGE,FREQUENCY,lexicalRes)) as lemmas from tmp group by FEELING")
+    res.printSchema()
 
-    sparkContext.parallelize(res.map(Document.parse)).saveToMongoDB()
+    /*val tmp=res.toJSON.collect
+    println("DataFrame parsed to JSON array")
+    val doc=tmp.map(Document.parse)
+    println("JSON array parsed to BSON Document")
+    sparkContext.parallelize(doc).saveToMongoDB()*/
+
+    val startTimeMillis = System.currentTimeMillis()
+    MongoSpark.save(res.write.mode("overwrite"))
+    println("Elapsed time for Mongo write: ",(System.currentTimeMillis() - startTimeMillis) / 1000)
   }
 }

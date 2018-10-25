@@ -4,7 +4,7 @@
 		module="maadb-progetto_2.11"
 		revision="0.1"
 		status="integration"
-		publication="20181021223354"
+		publication="20181022181439"
 	>
 		<description>
 		MAADB - progetto
@@ -36,5 +36,6 @@
 		<dependency org="org.apache.spark" name="spark-sql_2.11" rev="2.3.1" conf="compile->default(compile)"/>
 		<dependency org="org.mongodb.spark" name="mongo-spark-connector_2.11" rev="2.2.1" conf="compile->default(compile)"/>
 		<dependency org="net.liftweb" name="lift-json_2.11" rev="2.6+" conf="compile->default(compile)"/>
+		<dependency org="com.vdurmont" name="emoji-java" rev="4.0.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

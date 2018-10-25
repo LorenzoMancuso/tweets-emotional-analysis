@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="runtime"
 		confs="default, compile, runtime, test, provided, optional"
-		date="20181022091937"/>
+		date="20181025153309"/>
 	<dependencies>
 		<module organisation="org.jetbrains" name="sbt-structure-extractor">
 			<revision name="2018.2" status="release" pubdate="20180523205156" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="76">
