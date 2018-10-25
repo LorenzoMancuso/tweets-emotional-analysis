@@ -3,6 +3,7 @@ import org.apache.spark.sql.functions.explode
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
 object TweetsProcessing{
+
   def Processing(lexicalRes:DataFrame,tweets:DataFrame,sc:SparkContext): DataFrame ={
     val sqlContext:SparkSession = SparkSession
       .builder()
@@ -18,10 +19,13 @@ object TweetsProcessing{
     var result=sqlContext.sql(
       "SELECT DISTINCT lexicalRes.*,splittedTweets.COUNT AS FREQUENCY " +
         "FROM lexicalRes LEFT JOIN splittedTweets " +
-        //"ON lexicalRes.FEELING in ('Pos','Neg','Like-Love','Hope') OR LOWER(lexicalRes.FEELING) LIKE LOWER(CONCAT('%',splittedTweets.FEELING,'%'))" + //controls on FEELING
-        "ON LOWER(lexicalRes.FEELING) LIKE LOWER(CONCAT('%',splittedTweets.FEELING,'%'))" + //controls on FEELING
+        "ON (lexicalRes.FEELING in ('pos','neg','like-love','hope') OR LOWER(lexicalRes.FEELING) LIKE LOWER(CONCAT('%',splittedTweets.FEELING,'%')))" + //controls on FEELING
+        //"ON LOWER(lexicalRes.FEELING) LIKE LOWER(CONCAT('%',splittedTweets.FEELING,'%'))" + //controls on FEELING
         "AND LOWER(lexicalRes.LEMMA) = LOWER(splittedTweets.LEMMA)" //controls on LEMMA
     )
+
+    result.createOrReplaceTempView("result")
+    result=sqlContext.sql("SELECT FEELING, LEMMA, LEXICAL_RESOURCE,COUNT,PERCENTAGE, SUM(FREQUENCY) as FREQUENCY FROM result GROUP BY FEELING, LEMMA, LEXICAL_RESOURCE,COUNT,PERCENTAGE")
 
     var newWord=sqlContext.sql(
       "SELECT DISTINCT splittedTweets.FEELING,splittedTweets.LEMMA, 0 AS LEXICAL_RESOURCE, 0 AS COUNT, 0 AS PERCENTAGE, splittedTweets.COUNT AS FREQUENCY " +
