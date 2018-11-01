@@ -37,7 +37,7 @@ object TweetsPreProcessing{
     splittedTweets=splittedTweets.withColumn("LEMMA", explode(splittedTweets("TWEETS_WORDS_LIST"))).drop("TWEETS_WORDS_LIST")
 
     //rimuove parole anonimizzate USERNAME e URL
-    splittedTweets=splittedTweets.filter(word=> !word.getString(1).contains("USERNAME") && !word.getString(1).contains("URL"))
+    splittedTweets=splittedTweets.filter(word=> !word.getString(1).toLowerCase.contains("username") && !word.getString(1).toLowerCase.contains("url"))
 
     var hashtags = splittedTweets.filter(_.getString(1).contains("#"))
     //remove all hashtags
