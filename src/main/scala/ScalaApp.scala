@@ -41,8 +41,8 @@ object ScalaApp {
     val result=TweetsProcessing.Processing(lexicalRes,tweets,sc)
     println("Final data processing done")
 
-    WriteToMongo(sc,result)
-    println("write to Mongo executed")
+    //WriteToMongo(sc,result)
+    //println("write to Mongo executed")
 
     WriteToOracle(sc,result)
     println("write to Oracle executed")
