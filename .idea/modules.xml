@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MAADB - progetto.iml" filepath="$PROJECT_DIR$/.idea/modules/MAADB - progetto.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/maadb-scala_spark-build.iml" filepath="$PROJECT_DIR$/.idea/modules/maadb-scala_spark-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MAADB - progetto-build.iml" filepath="$PROJECT_DIR$/.idea/modules/MAADB - progetto-build.iml" />
     </modules>
   </component>
 </project>

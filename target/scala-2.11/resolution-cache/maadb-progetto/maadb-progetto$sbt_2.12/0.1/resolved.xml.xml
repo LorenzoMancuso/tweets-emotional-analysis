@@ -4,7 +4,7 @@
 		module="maadb-progetto$sbt_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20181104212906"
+		publication="20190307120719"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
@@ -17,7 +17,5 @@
 	</publications>
 	<dependencies>
 		<dependency org="org.scala-sbt" name="sbt" rev="1.2.3" conf="compile->default(compile)"/>
-		<dependency org="org.jetbrains" name="sbt-structure-extractor" rev="2018.2" conf="compile->default(compile)" scalaVersion="2.12" sbtVersion="1.0"/>
-		<dependency org="org.jetbrains" name="sbt-idea-shell" rev="2017.2" conf="compile->default(compile)" scalaVersion="2.12" sbtVersion="1.0"/>
 	</dependencies>
 </ivy-module>

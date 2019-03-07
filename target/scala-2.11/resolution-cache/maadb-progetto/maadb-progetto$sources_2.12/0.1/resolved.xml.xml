@@ -4,7 +4,7 @@
 		module="maadb-progetto$sources_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20181104212909"
+		publication="20190307120722"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>
@@ -123,10 +123,6 @@
 		</dependency>
 		<dependency org="org.scala-lang.modules" name="scala-parser-combinators_2.12" rev="1.0.5" transitive="false" conf="compile->master(*),compile,runtime(*),runtime,compile(*),master;runtime->master(*),compile,runtime(*),runtime,compile(*),master;test->master(*),compile,runtime(*),runtime,compile(*),master">
 			<artifact name="scala-parser-combinators_2.12" type="src" ext="jar" conf="*" e:classifier="sources"/>
-			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
-		</dependency>
-		<dependency org="org.jetbrains" name="sbt-idea-shell" rev="2017.2" transitive="false" conf="compile->compile,default(compile);runtime->compile,default(compile);test->compile,default(compile)" scalaVersion="2.12" sbtVersion="1.0">
-			<artifact name="sbt-idea-shell" type="src" ext="jar" conf="*" e:classifier="sources"/>
 			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
 		</dependency>
 		<dependency org="com.eed3si9n" name="sjson-new-scalajson_2.12" rev="0.8.2" transitive="false" conf="compile->master(*),compile,runtime(*),runtime,compile(*),master;runtime->master(*),compile,runtime(*),runtime,compile(*),master;test->master(*),compile,runtime(*),runtime,compile(*),master">
@@ -319,10 +315,6 @@
 		</dependency>
 		<dependency org="org.scala-sbt" name="logic_2.12" rev="1.2.3" transitive="false" conf="compile->master(*),compile,runtime(*),runtime,compile(*),master;runtime->master(*),compile,runtime(*),runtime,compile(*),master;test->master(*),compile,runtime(*),runtime,compile(*),master">
 			<artifact name="logic_2.12" type="src" ext="jar" conf="*" e:classifier="sources"/>
-			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
-		</dependency>
-		<dependency org="org.jetbrains" name="sbt-structure-extractor" rev="2018.2" transitive="false" conf="compile->compile,default(compile);runtime->compile,default(compile);test->compile,default(compile)" scalaVersion="2.12" sbtVersion="1.0">
-			<artifact name="sbt-structure-extractor" type="src" ext="jar" conf="*" e:classifier="sources"/>
 			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
 		</dependency>
 		<dependency org="org.scala-sbt" name="util-relation_2.12" rev="1.2.2" transitive="false" conf="compile->master(*),compile,runtime(*),runtime,compile(*),master;runtime->master(*),compile,runtime(*),runtime,compile(*),master;test->master(*),compile,runtime(*),runtime,compile(*),master">

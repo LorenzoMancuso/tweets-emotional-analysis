@@ -26,8 +26,8 @@ object ScalaApp {
       .setAppName("MAADB - progetto")
       .setMaster("local[*]")
       .set("spark.executor.memomory","1G")
-      .set("spark.mongodb.input.uri", "mongodb://127.0.0.1/MAADB.lexical_res_alt")
-      .set("spark.mongodb.output.uri", "mongodb://127.0.0.1/MAADB.lexical_res_alt")
+      .set("spark.mongodb.input.uri", "mongodb://127.0.0.1/MAADB.lexical_res_alts")
+      .set("spark.mongodb.output.uri", "mongodb://127.0.0.1/MAADB.lexical_res_alts")
 
     val sc = new SparkContext(sparkConf)
     sc.setLogLevel("ERROR")
@@ -41,8 +41,8 @@ object ScalaApp {
     val result=TweetsProcessing.Processing(lexicalRes,tweets,sc)
     println("Final data processing done")
 
-    //WriteToMongo(sc,result)
-    //println("write to Mongo executed")
+    WriteToMongo(sc,result)
+    println("write to Mongo executed")
 
     WriteToOracle(sc,result)
     println("write to Oracle executed")
