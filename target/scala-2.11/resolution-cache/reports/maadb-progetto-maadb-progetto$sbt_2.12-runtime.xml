@@ -7,8 +7,32 @@
 		revision="0.1"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional"
-		date="20190307120719"/>
+		date="20190307151755"/>
 	<dependencies>
+		<module organisation="org.jetbrains" name="sbt-idea-shell">
+			<revision name="2018.3" status="release" pubdate="20181105210000" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="83">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="2421" time="0" location="/home/lore/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-idea-shell/ivy-2018.3.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-idea-shell/scala_2.12/sbt_1.0/2018.3/ivys/ivy.xml"/>
+				<caller organisation="maadb-progetto" name="maadb-progetto$sbt_2.12" conf="compile, runtime" rev="2018.3" rev-constraint-default="2018.3" rev-constraint-dynamic="2018.3" callerrev="0.1" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
+				<artifacts>
+					<artifact name="sbt-idea-shell" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="2098" time="1325" location="/home/lore/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-idea-shell/srcs/sbt-idea-shell-2018.3-sources.jar">
+						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-idea-shell/scala_2.12/sbt_1.0/2018.3/srcs/sbt-idea-shell-sources.jar"/>
+					</artifact>
+					<artifact name="sbt-idea-shell" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="1175059" time="1073" location="/home/lore/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-idea-shell/docs/sbt-idea-shell-2018.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-idea-shell/scala_2.12/sbt_1.0/2018.3/docs/sbt-idea-shell-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.jetbrains" name="sbt-structure-extractor">
+			<revision name="2018.2.1+4-88400d3f" status="integration" pubdate="20180919230826" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="82">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="2067" time="0" location="/home/lore/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-structure-extractor/ivy-2018.2.1+4-88400d3f.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-structure-extractor/scala_2.12/sbt_1.0/2018.2.1+4-88400d3f/ivys/ivy.xml"/>
+				<caller organisation="maadb-progetto" name="maadb-progetto$sbt_2.12" conf="compile, runtime" rev="2018.2.1+4-88400d3f" rev-constraint-default="2018.2.1+4-88400d3f" rev-constraint-dynamic="2018.2.1+4-88400d3f" callerrev="0.1" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.scala-sbt" name="sbt">
 			<revision name="1.2.3" status="release" pubdate="20180914071836" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/sbt/sbt" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
 				<license name="BSD New" url="https://github.com/sbt/sbt/blob/0.13/LICENSE"/>

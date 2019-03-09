@@ -9,6 +9,7 @@ import java.io._
 import MongoUtils._
 import OracleUtils._
 
+/* UNUSED WITH NEW VERSION
 trait indexes {
   val lexResIndex={ var i :Long= 0; () => { i += 1; i} }
   val lemmaIndex={ var i :Long= 0; () => { i += 1; i} }
@@ -17,6 +18,7 @@ trait indexes {
 
 case class Lemma(var id:Long, var name:String, var lexicalRes:scala.collection.mutable.Map[String,Double]=scala.collection.mutable.Map[String,Double](), var percentage:Double=0)
 case class Feeling(var id:Long, var name:String, var lemmas:List[Lemma]=List[Lemma](), var totalWords:Int=0)
+*/
 
 object ScalaApp {
   def main(args: Array[String]) {
