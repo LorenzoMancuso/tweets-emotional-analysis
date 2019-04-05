@@ -1,16 +1,15 @@
-import java.util.{Calendar, Properties}
+import java.util.{Properties}
 
 import org.apache.spark.SparkContext
-import org.apache.spark.sql.types._
-import org.apache.spark.sql.{DataFrame, Row, SparkSession}
+import org.apache.spark.sql.{DataFrame, SparkSession}
 
 private case class LexicalResOracle(var id:Long, var name:String, var value:Double, var idLemma:Long)
 private case class LemmaOracle(var id:Long, var name:String, var percentage:Double=0, var idFeeling:Long)
 private case class FeelingOracle(var id:Long, var name:String, var totalWords:Int=0)
 
-object OracleUtils extends indexes {
+object OracleUtils{
 
-  def WriteToOracle(sc:SparkContext,df:DataFrame) :Unit={
+  def WriteToOracle(sc:SparkContext,df:DataFrame,emojis:DataFrame,hashtags:DataFrame) :Unit={
     //***ORACLE CONF***
     val sqlContext:SparkSession = SparkSession
       .builder()
@@ -23,6 +22,7 @@ object OracleUtils extends indexes {
     val jdbcPort = 1521
     val jdbcUsername = "SYSTEM"
     val jdbcPassword = "root"
+
     // Create the JDBC URL without passing in the user and password parameters.
     val jdbcUrl = s"jdbc:oracle:thin:@${jdbcHostname}:${jdbcPort}:XE"
     // Create a Properties() object to hold the parameters.
@@ -39,6 +39,9 @@ object OracleUtils extends indexes {
     OracleInsert(df.select(df("FEELING").as("NAME")).distinct,"ALT_MAADB_FEELING",jdbcUrl,connectionProperties)
     OracleInsert(df.select(df("LEMMA").as("NAME"),df("PERCENTAGE"),df("FEELING"),df("FREQUENCY")).distinct,"ALT_MAADB_LEMMA",jdbcUrl,connectionProperties)
     OracleInsert(df.select(df("LEXICAL_RESOURCE").as("NAME"),df("COUNT").as("VALUE"),df("FEELING"),df("LEMMA")).distinct,"ALT_MAADB_LEXICAL_RESOURCE",jdbcUrl,connectionProperties)
+
+    OracleInsert(emojis.select(emojis("FEELING"),emojis("SYMBOL"),emojis("TYPE"),emojis("COUNT")),"ALT_MAADB_SYMBOL",jdbcUrl,connectionProperties)
+    OracleInsert(hashtags.select(hashtags("FEELING"),hashtags("LEMMA"),hashtags("COUNT")),"ALT_MAADB_HASHTAG",jdbcUrl,connectionProperties)
 
     println("Elapsed time for Oracle write: ",(System.currentTimeMillis() - startTimeMillis) / 1000)
   }

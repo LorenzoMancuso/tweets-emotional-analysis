@@ -1,4 +1,2 @@
-[0m[[0m[31merror[0m] [0m[0m/home/lore/Universita/MAADB-scala_spark/src/main/scala/TweetsProcessing.scala:16:69: forward reference extends over definition of variable splittedTweets[0m
-[0m[[0m[31merror[0m] [0m[0m    var splittedTweets:DataFrame=tweets.withColumn("LEMMA", explode(splittedTweets("TWEETS_WORDS_LIST"))).drop("TWEETS_WORDS_LIST").groupBy("FEELING","LEMMA").count()[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                    ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[0mdebug[0m] [0m[0mAcquiring lock on file /home/lore/Universita/MAADB-scala_spark/project/target/.sbt-compilation-infos/maadb-scala_spark-compile/.sbt-idea-lock ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mReleasing lock on file /home/lore/Universita/MAADB-scala_spark/project/target/.sbt-compilation-infos/maadb-scala_spark-compile/.sbt-idea-lock.[0m

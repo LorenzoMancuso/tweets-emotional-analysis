@@ -4,7 +4,7 @@
 		module="maadb-scala_spark-build"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20190307121452"
+		publication="20190404191409"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>

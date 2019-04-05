@@ -7,18 +7,52 @@
 		revision="0.1"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional"
-		date="20190307151755"/>
+		date="20190404191417"/>
 	<dependencies>
+		<module organisation="org.jetbrains" name="sbt-idea-compiler-indices">
+			<revision name="0.1.2" status="release" pubdate="20190313204823" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="84">
+				<metadata-artifact status="no" details="" size="2546" time="0" location="/home/lore/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-idea-compiler-indices/ivy-0.1.2.xml" searched="false" origin-is-local="true" origin-location="/home/lore/.IntelliJIdea2019.1/config/plugins/Scala/repo/org.jetbrains/sbt-idea-compiler-indices/scala_2.12/sbt_1.0/0.1.2/ivys/ivy.xml"/>
+				<caller organisation="maadb-progetto" name="maadb-progetto$sbt_2.12" conf="compile" rev="0.1.2" rev-constraint-default="0.1.2" rev-constraint-dynamic="0.1.2" callerrev="0.1" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
+				<artifacts>
+					<artifact name="sbt-idea-compiler-indices" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="5816" time="0" location="/home/lore/.IntelliJIdea2019.1/config/plugins/Scala/repo/org.jetbrains/sbt-idea-compiler-indices/scala_2.12/sbt_1.0/0.1.2/srcs/sbt-idea-compiler-indices-sources.jar">
+						<origin-location is-local="true" location="/home/lore/.IntelliJIdea2019.1/config/plugins/Scala/repo/org.jetbrains/sbt-idea-compiler-indices/scala_2.12/sbt_1.0/0.1.2/srcs/sbt-idea-compiler-indices-sources.jar"/>
+					</artifact>
+					<artifact name="sbt-idea-compiler-indices" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="0" time="0" location="/home/lore/.IntelliJIdea2019.1/config/plugins/Scala/repo/org.jetbrains/sbt-idea-compiler-indices/scala_2.12/sbt_1.0/0.1.2/docs/sbt-idea-compiler-indices-javadoc.jar">
+						<origin-location is-local="true" location="/home/lore/.IntelliJIdea2019.1/config/plugins/Scala/repo/org.jetbrains/sbt-idea-compiler-indices/scala_2.12/sbt_1.0/0.1.2/docs/sbt-idea-compiler-indices-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.github.sugakandrey" name="scala-compiler-indices-protocol_2.12">
+			<revision name="0.1.1" status="release" pubdate="20190313141148" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/JetBrains/intellij-scala-indices-protocol" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="85">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2892" time="0" location="/home/lore/.ivy2/cache/io.github.sugakandrey/scala-compiler-indices-protocol_2.12/ivy-0.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/github/sugakandrey/scala-compiler-indices-protocol_2.12/0.1.1/scala-compiler-indices-protocol_2.12-0.1.1.pom"/>
+				<caller organisation="maadb-progetto" name="maadb-progetto$sbt_2.12" conf="compile" rev="0.1.1" rev-constraint-default="0.1.1" rev-constraint-dynamic="0.1.1" callerrev="0.1"/>
+				<caller organisation="org.jetbrains" name="sbt-idea-compiler-indices" conf="compile" rev="0.1.1" rev-constraint-default="0.1.1" rev-constraint-dynamic="0.1.1" callerrev="0.1.2"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.spray" name="spray-json_2.12">
+			<revision name="1.3.4" status="release" pubdate="20171024085349" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/spray/spray-json" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="86">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3081" time="0" location="/home/lore/.ivy2/cache/io.spray/spray-json_2.12/ivy-1.3.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/spray/spray-json_2.12/1.3.4/spray-json_2.12-1.3.4.pom"/>
+				<caller organisation="io.github.sugakandrey" name="scala-compiler-indices-protocol_2.12" conf="default, compile, runtime, master" rev="1.3.4" rev-constraint-default="1.3.4" rev-constraint-dynamic="1.3.4" callerrev="0.1.1"/>
+				<caller organisation="maadb-progetto" name="maadb-progetto$sbt_2.12" conf="compile" rev="1.3.4" rev-constraint-default="1.3.4" rev-constraint-dynamic="1.3.4" callerrev="0.1"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.jetbrains" name="sbt-idea-shell">
 			<revision name="2018.3" status="release" pubdate="20181105210000" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="83">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
 				<metadata-artifact status="no" details="" size="2421" time="0" location="/home/lore/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-idea-shell/ivy-2018.3.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-idea-shell/scala_2.12/sbt_1.0/2018.3/ivys/ivy.xml"/>
 				<caller organisation="maadb-progetto" name="maadb-progetto$sbt_2.12" conf="compile" rev="2018.3" rev-constraint-default="2018.3" rev-constraint-dynamic="2018.3" callerrev="0.1" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
 				<artifacts>
-					<artifact name="sbt-idea-shell" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="2098" time="1325" location="/home/lore/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-idea-shell/srcs/sbt-idea-shell-2018.3-sources.jar">
+					<artifact name="sbt-idea-shell" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="2098" time="0" location="/home/lore/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-idea-shell/srcs/sbt-idea-shell-2018.3-sources.jar">
 						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-idea-shell/scala_2.12/sbt_1.0/2018.3/srcs/sbt-idea-shell-sources.jar"/>
 					</artifact>
-					<artifact name="sbt-idea-shell" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="1175059" time="1073" location="/home/lore/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-idea-shell/docs/sbt-idea-shell-2018.3-javadoc.jar">
+					<artifact name="sbt-idea-shell" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1175059" time="0" location="/home/lore/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-idea-shell/docs/sbt-idea-shell-2018.3-javadoc.jar">
 						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-idea-shell/scala_2.12/sbt_1.0/2018.3/docs/sbt-idea-shell-javadoc.jar"/>
 					</artifact>
 				</artifacts>
@@ -973,7 +1007,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.12.6" status="release" pubdate="20180427104006" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.6/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="1">
+			<revision name="2.12.6" status="release" pubdate="20180427104006" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.6/" downloaded="false" searched="false" default="false" conf="master(*), default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="1">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
 				<metadata-artifact status="no" details="" size="2471" time="0" location="/home/lore/.ivy2/cache/org.scala-lang/scala-library/ivy-2.12.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.6/scala-library-2.12.6.pom"/>
 				<caller organisation="org.scala-lang.modules" name="scala-parser-combinators_2.12" conf="compile, runtime" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="1.0.5"/>
@@ -985,6 +1019,7 @@
 				<caller organisation="org.scala-sbt" name="librarymanagement-ivy_2.12" conf="compile, runtime" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="1.2.1"/>
 				<caller organisation="org.scala-sbt" name="zinc-compile_2.12" conf="compile, runtime" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="1.2.2"/>
 				<caller organisation="org.scala-lang.modules" name="scala-xml_2.12" conf="compile, runtime" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="1.0.6"/>
+				<caller organisation="io.github.sugakandrey" name="scala-compiler-indices-protocol_2.12" conf="default, compile, runtime, master" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="0.1.1"/>
 				<caller organisation="org.scala-sbt" name="testing_2.12" conf="compile, runtime" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="1.2.3"/>
 				<caller organisation="org.scala-sbt" name="zinc-compile-core_2.12" conf="compile, runtime" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="1.2.2"/>
 				<caller organisation="org.scala-sbt" name="io_2.12" conf="compile, runtime" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="1.2.1"/>
@@ -1013,6 +1048,7 @@
 				<caller organisation="com.github.cb372" name="scalacache-caffeine_2.12" conf="compile, runtime" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="0.20.0"/>
 				<caller organisation="com.eed3si9n" name="gigahorse-core_2.12" conf="compile, runtime" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="0.3.0"/>
 				<caller organisation="com.trueaccord.lenses" name="lenses_2.12" conf="compile, runtime" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="0.4.12"/>
+				<caller organisation="io.spray" name="spray-json_2.12" conf="compile, runtime" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="1.3.4"/>
 				<caller organisation="com.lihaoyi" name="sourcecode_2.12" conf="compile, runtime" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="0.1.3"/>
 				<caller organisation="org.scala-sbt" name="util-relation_2.12" conf="compile, runtime" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="1.2.2"/>
 				<caller organisation="com.lihaoyi" name="fastparse_2.12" conf="compile, runtime" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="0.4.2"/>
@@ -1032,6 +1068,7 @@
 				<caller organisation="com.eed3si9n" name="shaded-scalajson_2.12" conf="compile, runtime" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="1.0.0-M4"/>
 				<caller organisation="com.lihaoyi" name="fastparse-utils_2.12" conf="compile, runtime" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="0.4.2"/>
 				<caller organisation="org.scala-sbt" name="scripted-sbt-redux_2.12" conf="compile, runtime" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="1.2.3"/>
+				<caller organisation="maadb-progetto" name="maadb-progetto$sbt_2.12" conf="compile" rev="2.12.6" rev-constraint-default="2.12.6" rev-constraint-dynamic="2.12.6" callerrev="0.1" extra-info.apiURL="http://www.scala-lang.org/api/2.12.6/"/>
 				<artifacts>
 				</artifacts>
 			</revision>
