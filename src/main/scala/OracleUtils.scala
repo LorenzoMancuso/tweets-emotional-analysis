@@ -40,8 +40,8 @@ object OracleUtils{
     OracleInsert(df.select(df("LEMMA").as("NAME"),df("PERCENTAGE"),df("FEELING"),df("FREQUENCY")).distinct,"ALT_MAADB_LEMMA",jdbcUrl,connectionProperties)
     OracleInsert(df.select(df("LEXICAL_RESOURCE").as("NAME"),df("COUNT").as("VALUE"),df("FEELING"),df("LEMMA")).distinct,"ALT_MAADB_LEXICAL_RESOURCE",jdbcUrl,connectionProperties)
 
-    OracleInsert(emojis.select(emojis("FEELING"),emojis("SYMBOL"),emojis("TYPE"),emojis("COUNT")),"ALT_MAADB_SYMBOL",jdbcUrl,connectionProperties)
-    OracleInsert(hashtags.select(hashtags("FEELING"),hashtags("LEMMA"),hashtags("COUNT")),"ALT_MAADB_HASHTAG",jdbcUrl,connectionProperties)
+    OracleInsert(emojis.select(emojis("FEELING"),emojis("SYMBOL"),emojis("ALIAS"),emojis("HTML_HEX"),emojis("COUNT")),"ALT_MAADB_SYMBOL",jdbcUrl,connectionProperties)
+    OracleInsert(hashtags.select(hashtags("FEELING"),hashtags("LEMMA").as("HASHTAG"),hashtags("COUNT")),"ALT_MAADB_HASHTAG",jdbcUrl,connectionProperties)
 
     println("Elapsed time for Oracle write: ",(System.currentTimeMillis() - startTimeMillis) / 1000)
   }

@@ -44,24 +44,36 @@ object TweetsPreProcessing{
       .toDF()
     // **************************************************************************
 
-    // EMOJI/EMOTICON COUNT *****************************************************
-    var ee = tweets
+    /*/ EMOJI COUNT *****************************************************
+    var emojis = tweets
       .map(tweet => (tweet.getString(0),EmojiParser.extractEmojis(tweet.getString(1)).toString.split("")))
       .toDF("FEELING","EMOJIS")
-    ee=ee
-      .withColumn("SYMBOL", explode(ee("EMOJIS")))
+    emojis=emojis
+      .withColumn("SYMBOL", explode(emojis("EMOJIS")))
       .drop("EMOJIS")
+      .filter(row=>row.getString(1)!="")
       .groupBy("FEELING","SYMBOL").count()
-    // **************************************************************************
+    // **************************************************************************/
 
     // SPLIT TWEETS IN LEMMAS ***************************************************
     var splittedTweets=tweets
-      .map(row=>(row.getString(0),EmojiParser.removeAllEmojis(row.getString(1)).split(" "))) //remove emojis/emoticons and split by space
+      //.map(row=>(row.getString(0),EmojiParser.removeAllEmojis(row.getString(1)).split(" "))) //remove emojis/emoticons and split by space
+      .map(row=>(row.getString(0), row.getString(1).split(" "))) //split by space
       .toDF("FEELING","TWEETS_WORDS_LIST") //tokenized tweets
 
     splittedTweets=splittedTweets
       .withColumn("LEMMA", explode(splittedTweets("TWEETS_WORDS_LIST")))
       .drop("TWEETS_WORDS_LIST")
+    // **************************************************************************
+
+    // EMOTICONS / EMOJIS COUNT *****************************************************
+    var emoticons = splittedTweets.filter(row => (posemoticons contains row.getString(1)) || (negemoticons contains row.getString(1)) || EmojiManager.isEmoji(row.getString(1)))
+    splittedTweets=splittedTweets.except(emoticons) //remove all emoticons from lemmas
+    emoticons=emoticons
+        .map(row => (row.getString(0), row.getString(1),EmojiParser.parseToAliases(row.getString(1)),EmojiParser.parseToHtmlHexadecimal(row.getString(1))))
+      .toDF("FEELING","SYMBOL","ALIAS","HTML_HEX")
+      .filter(row=> row.getString(1).length>0)
+      .groupBy("FEELING","SYMBOL", "ALIAS","HTML_HEX").count()
     // **************************************************************************
 
     // PUNCTUATION, STOP WORDS AND FILTER ***************************************
@@ -77,7 +89,7 @@ object TweetsPreProcessing{
     hashtags=hashtags.groupBy("FEELING","LEMMA").count()
     // **************************************************************************
 
-    (splittedTweets.groupBy("FEELING","LEMMA").count(), ee, hashtags)
+    (splittedTweets.groupBy("FEELING","LEMMA").count(), emoticons, hashtags)
   }
 
   def GetFileList(path:String): List[String]={
