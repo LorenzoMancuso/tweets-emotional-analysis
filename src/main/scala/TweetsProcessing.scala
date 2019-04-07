@@ -18,13 +18,16 @@ object TweetsProcessing{
     splittedTweets.createOrReplaceTempView("splittedTweets")
     var result=sqlContext.sql(
       "SELECT DISTINCT lexicalRes.*,splittedTweets.COUNT AS FREQUENCY " +
-        "FROM lexicalRes LEFT JOIN splittedTweets " +
+        "FROM lexicalRes " +
+        "LEFT JOIN splittedTweets " +
         "ON (lexicalRes.FEELING in ('pos','neg','like-love','hope') OR LOWER(lexicalRes.FEELING) LIKE LOWER(CONCAT('%',splittedTweets.FEELING,'%')))" + //controls on FEELING
         "AND LOWER(lexicalRes.LEMMA) = LOWER(splittedTweets.LEMMA)" //controls on LEMMA
     )
 
     result.createOrReplaceTempView("result")
-    result=sqlContext.sql("SELECT FEELING, LEMMA, LEXICAL_RESOURCE,COUNT,PERCENTAGE, SUM(FREQUENCY) as FREQUENCY FROM result GROUP BY FEELING, LEMMA, LEXICAL_RESOURCE,COUNT,PERCENTAGE")
+    result=sqlContext.sql("SELECT FEELING, LEMMA, LEXICAL_RESOURCE,COUNT,PERCENTAGE, SUM(FREQUENCY) as FREQUENCY " +
+      "FROM result " +
+      "GROUP BY FEELING, LEMMA, LEXICAL_RESOURCE,COUNT,PERCENTAGE")
 
     var newWord=sqlContext.sql(
       "SELECT DISTINCT splittedTweets.FEELING,splittedTweets.LEMMA, 0 AS LEXICAL_RESOURCE, 0 AS COUNT, 0 AS PERCENTAGE, splittedTweets.COUNT AS FREQUENCY " +

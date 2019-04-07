@@ -46,7 +46,6 @@ object TweetsPreProcessing{
 
     // SPLIT TWEETS IN LEMMAS ***************************************************
     var splittedTweets=tweets
-      //.map(row=>(row.getString(0),EmojiParser.removeAllEmojis(row.getString(1)).split(" "))) //remove emojis/emoticons and split by space
       .map(row=>(row.getString(0), row.getString(1).split(" "))) //split by space
       .toDF("FEELING","TWEETS_WORDS_LIST") //tokenized tweets
 
@@ -57,7 +56,9 @@ object TweetsPreProcessing{
 
     // EMOTICONS / EMOJIS COUNT *****************************************************
     var emoticons = splittedTweets.filter(row => (posemoticons contains row.getString(1)) || (negemoticons contains row.getString(1)) || EmojiManager.isEmoji(row.getString(1)))
-    splittedTweets=splittedTweets.except(emoticons) //remove all emoticons from lemmas
+    //splittedTweets=splittedTweets.except(emoticons) //remove all emoticons from lemmas
+    splittedTweets=splittedTweets.filter(row => !((posemoticons contains row.getString(1)) || (negemoticons contains row.getString(1)) || EmojiManager.isEmoji(row.getString(1)))) //remove all emoticons from lemmas
+
     emoticons=emoticons
         .map(row => (row.getString(0), row.getString(1),EmojiParser.parseToAliases(row.getString(1)),EmojiParser.parseToHtmlHexadecimal(row.getString(1))))
       .toDF("FEELING","SYMBOL","ALIAS","HTML_HEX")
@@ -74,11 +75,13 @@ object TweetsPreProcessing{
 
     // HASHTAGS COUNT *****************************************************
     var hashtags = splittedTweets.filter(_.getString(1).contains("#"))
-    splittedTweets=splittedTweets.except(hashtags) //remove all hashtags from lemmas
+    //splittedTweets=splittedTweets.except(hashtags) //remove all hashtags from lemmas
+    splittedTweets = splittedTweets.filter(!_.getString(1).contains("#")) //remove all hashtags from lemmas
     hashtags=hashtags.groupBy("FEELING","LEMMA").count()
     // **************************************************************************
 
-    (splittedTweets.groupBy("FEELING","LEMMA").count(), emoticons, hashtags)
+    splittedTweets=splittedTweets.groupBy("FEELING","LEMMA").count()
+    (splittedTweets, emoticons, hashtags)
   }
 
   def GetFileList(path:String): List[String]={
