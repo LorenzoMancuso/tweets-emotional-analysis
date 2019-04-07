@@ -40,20 +40,9 @@ object TweetsPreProcessing{
     import sqlContext.implicits._
     tweets=tweets
       .map(row=>(row.getString(0).replaceAll("disgust","disgust-hate"),
-        UtilsPreProcessing.slang.getOrElse(row.getString(1),row.getString(1).toLowerCase).toLowerCase))
+        this.slang.getOrElse(row.getString(1),row.getString(1).toLowerCase).toLowerCase))
       .toDF()
     // **************************************************************************
-
-    /*/ EMOJI COUNT *****************************************************
-    var emojis = tweets
-      .map(tweet => (tweet.getString(0),EmojiParser.extractEmojis(tweet.getString(1)).toString.split("")))
-      .toDF("FEELING","EMOJIS")
-    emojis=emojis
-      .withColumn("SYMBOL", explode(emojis("EMOJIS")))
-      .drop("EMOJIS")
-      .filter(row=>row.getString(1)!="")
-      .groupBy("FEELING","SYMBOL").count()
-    // **************************************************************************/
 
     // SPLIT TWEETS IN LEMMAS ***************************************************
     var splittedTweets=tweets

@@ -189,5 +189,6 @@
     <orderEntry type="library" name="sbt: com.carrotsearch:hppc:0.7.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.vdurmont:emoji-java:4.0.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.json:json:20170516:jar" level="project" />
+    <orderEntry type="library" name="ojdbc6" level="project" />
   </component>
 </module>

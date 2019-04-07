@@ -22,16 +22,9 @@ object ScalaApp {
       .set("spark.memory.offHeap.size","10g")
       .set("spark.mongodb.input.uri", "mongodb://127.0.0.1/MAADB.lexical_res_alts")
       .set("spark.mongodb.output.uri", "mongodb://127.0.0.1/MAADB.lexical_res_alts")
-    //--master yarn-cluster --num-executors 10 --executor-cores 3 --executor-memory 4g --driver-memory 5g  --conf spark.yarn.executor.memoryOverhead=409
 
     val sc = new SparkContext(sparkConf)
     sc.setLogLevel("ERROR")
-
-    //UtilsPreProcessing.PreProcessing(sc)
-    //println("Utils preprocessing done")
-    /*println(UtilsPreProcessing.emojiPos)
-    println(UtilsPreProcessing.emojiNeg)
-    println(UtilsPreProcessing.othersEmoji)*/
 
     val lexicalRes=LexicalResPreProcessingAlt.PreProcessing(sc)
     println("Lexical Res preprocessing done")
@@ -45,8 +38,8 @@ object ScalaApp {
     WriteToMongo(sc,result,emojis,hashtags)
     println("write to Mongo executed")
 
-    /*WriteToOracle(sc,result,emojis,hashtags)
-    println("write to Oracle executed")*/
+    WriteToOracle(sc,result,emojis,hashtags)
+    println("write to Oracle executed")
 
   }
 

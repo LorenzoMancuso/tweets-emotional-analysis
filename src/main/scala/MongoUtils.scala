@@ -7,7 +7,8 @@ import net.liftweb.json.Serialization.write
 
 object MongoUtils{
   /*
- |-- FEELING: string (nullable = true)
+ root
+ |-- _id: string (nullable = true)
  |-- lemmas: array (nullable = true)
  |    |-- element: struct (containsNull = true)
  |    |    |-- LEMMA: string (nullable = true)
@@ -17,14 +18,23 @@ object MongoUtils{
  |    |    |    |-- element: struct (containsNull = true)
  |    |    |    |    |-- LEXICAL_RESOURCE: string (nullable = true)
  |    |    |    |    |-- count: string (nullable = true)
+
+root
+ |-- _id: string (nullable = true)
  |-- emojis: array (nullable = true)
  |    |-- element: struct (containsNull = true)
  |    |    |-- SYMBOL: string (nullable = true)
  |    |    |-- ALIAS: string (nullable = true)
  |    |    |-- HTML_HEX: string (nullable = true)
+ |    |    |-- COUNT: long (nullable = false)
+
+root
+ |-- _id: string (nullable = true)
  |-- hashtags: array (nullable = true)
  |    |-- element: struct (containsNull = true)
- |    |    |-- LEMMA: string (nullable = true)*/
+ |    |    |-- HASHTAG: string (nullable = true)
+ |    |    |-- COUNT: long (nullable = false)
+ */
   def WriteToMongo(sparkContext:SparkContext,df:DataFrame,emojis:DataFrame,hashtags:DataFrame): Unit ={
     val sqlContext:SparkSession = SparkSession
       .builder()
@@ -56,12 +66,12 @@ object MongoUtils{
       "group by tmp.FEELING")
     mongoLemmas.printSchema()
 
-    val mongoEmojis=sqlContext.sql("select EMOJIS.FEELING as _id, collect_list(struct(EMOJIS.SYMBOL, EMOJIS.ALIAS, EMOJIS.HTML_HEX)) as emojis " +
+    val mongoEmojis=sqlContext.sql("select EMOJIS.FEELING as _id, collect_list(struct(EMOJIS.SYMBOL, EMOJIS.ALIAS, EMOJIS.HTML_HEX, EMOJIS.COUNT)) as emojis " +
       "from EMOJIS " +
       "group by EMOJIS.FEELING")
     mongoEmojis.printSchema()
 
-    val mongoHashtags=sqlContext.sql("select HASHTAGS.FEELING as _id, collect_list(struct(HASHTAGS.LEMMA)) as hashtags " +
+    val mongoHashtags=sqlContext.sql("select HASHTAGS.FEELING as _id, collect_list(struct(HASHTAGS.LEMMA AS HASHTAG, HASHTAGS.COUNT)) as hashtags " +
       "from HASHTAGS " +
       "group by HASHTAGS.FEELING")
     mongoHashtags.printSchema()
@@ -70,11 +80,6 @@ object MongoUtils{
     sqlContext.catalog.dropTempView("EMOJIS")
     sqlContext.catalog.dropTempView("HASHTAGS")
 
-    /*val tmp=res.toJSON.collect
-    println("DataFrame parsed to JSON array")
-    val doc=tmp.map(Document.parse)
-    println("JSON array parsed to BSON Document")
-    sparkContext.parallelize(doc).saveToMongoDB()*/
 
     val startTimeMillis = System.currentTimeMillis()
     MongoSpark.save(mongoLemmas.write.option("replaceDocument", "false").mode("append")) //mode("append")

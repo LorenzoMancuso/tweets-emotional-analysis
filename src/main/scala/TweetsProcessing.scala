@@ -20,7 +20,6 @@ object TweetsProcessing{
       "SELECT DISTINCT lexicalRes.*,splittedTweets.COUNT AS FREQUENCY " +
         "FROM lexicalRes LEFT JOIN splittedTweets " +
         "ON (lexicalRes.FEELING in ('pos','neg','like-love','hope') OR LOWER(lexicalRes.FEELING) LIKE LOWER(CONCAT('%',splittedTweets.FEELING,'%')))" + //controls on FEELING
-        //"ON LOWER(lexicalRes.FEELING) LIKE LOWER(CONCAT('%',splittedTweets.FEELING,'%'))" + //controls on FEELING
         "AND LOWER(lexicalRes.LEMMA) = LOWER(splittedTweets.LEMMA)" //controls on LEMMA
     )
 
