@@ -66,6 +66,9 @@ root
       "group by tmp.FEELING")
     mongoLemmas.printSchema()
 
+    val mongoLemmas1=mongoLemmas.filter(row=> Array("joy","anger","surprise").contains(row.getString(0)))
+    val mongoLemmas2=mongoLemmas.except(mongoLemmas1)
+
     val mongoEmojis=sqlContext.sql("select EMOJIS.FEELING as _id, collect_list(struct(EMOJIS.SYMBOL, EMOJIS.ALIAS, EMOJIS.HTML_HEX, EMOJIS.COUNT)) as emojis " +
       "from EMOJIS " +
       "group by EMOJIS.FEELING")
@@ -82,7 +85,9 @@ root
 
 
     val startTimeMillis = System.currentTimeMillis()
-    MongoSpark.save(mongoLemmas.write.option("replaceDocument", "false").mode("append")) //mode("append")
+    MongoSpark.save(mongoLemmas1.write.option("replaceDocument", "false").mode("append")) //mode("append")
+    MongoSpark.save(mongoLemmas2.write.option("replaceDocument", "false").mode("append")) //mode("append")
+
     MongoSpark.save(mongoEmojis.write.option("replaceDocument", "false").mode("append")) //mode("append")
     MongoSpark.save(mongoHashtags.write.option("replaceDocument", "false").mode("append")) //mode("append")
     println("Elapsed time for Mongo write: ",(System.currentTimeMillis() - startTimeMillis) / 1000)

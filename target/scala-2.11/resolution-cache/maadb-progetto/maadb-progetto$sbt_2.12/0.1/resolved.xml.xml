@@ -4,7 +4,7 @@
 		module="maadb-progetto$sbt_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20190407190851"
+		publication="20190621170833"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
