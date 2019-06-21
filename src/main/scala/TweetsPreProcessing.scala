@@ -37,16 +37,12 @@ object TweetsPreProcessing{
       }
     }
 
-    /*/ SOSTITUZIONE SLANG WORDS ***********************************************
+    // SOSTITUZIONE SLANG WORDS ***********************************************
     import sqlContext.implicits._
-    for ((key,value) <- slang){
-      println(key)
-      tweets=tweets
-        //.map(row=>(row.getString(0).replaceAll("disgust","disgust-hate"), row.getString(1).replace("^("+key+")\\W+|\\W+("+key+")\\W+",value)))
-        .map(row=>(row.getString(0).replaceAll("disgust","disgust-hate"), row.getString(1)))
-        .toDF()
-    }
-    // **************************************************************************/
+    tweets=tweets
+      .map(row=>(row.getString(0).replaceAll("disgust","disgust-hate"), ReplaceSlang(row.getString(1))))
+      .toDF()
+    // **************************************************************************
 
     // SPLIT TWEETS IN LEMMAS ***************************************************
     import sqlContext.implicits._
@@ -78,18 +74,6 @@ object TweetsPreProcessing{
       .toDF("FEELING","LEMMA")
     // **************************************************************************
 
-    /*/ SOSTITUZIONE SLANG WORDS ***********************************************
-    splittedTweets.foreach { row =>
-      var tmp = this.slang.getOrElse(row.getString(1),"not found")
-      if(tmp != "not found"){
-        tmp.split(" ").foreach{ word=>
-          splittedTweets.union(Seq(row.getString(0), word).toDF())
-        }
-      }
-      splittedTweets=splittedTweets.filter(otherRow=> otherRow==row)
-    }
-    // **************************************************************************/
-
     // HASHTAGS COUNT *****************************************************
     var hashtags = splittedTweets.filter(_.getString(1).contains("#"))
     //splittedTweets=splittedTweets.except(hashtags) //remove all hashtags from lemmas
@@ -99,6 +83,14 @@ object TweetsPreProcessing{
 
     splittedTweets=splittedTweets.groupBy("FEELING","LEMMA").count()
     (splittedTweets, emoticons, hashtags)
+  }
+
+  def ReplaceSlang(value:String):String={
+    var ret=value
+    for ((key,value) <- slang) {
+      ret=ret.replace("^("+key+")\\W+|\\W+("+key+")\\W+",value)
+    }
+    return ret
   }
 
   def GetFileList(path:String): List[String]={
@@ -122,9 +114,11 @@ object TweetsPreProcessing{
   def CleanTweet(tweet:String):String={
     var res=tweet
     res=StringUtils.replaceEach(res, this.punctuaction.toArray, Array.fill[String](this.punctuaction.length)(" "))//eliminare punteggiatura
-
-    if(this.stopWords.contains(res) || this.negationWords.contains(res) || slang.exists(_._1 == res)) {res=""}//eliminare stop words
     res=res.replaceAll(" ","").replaceAll("\n","")
+
+    if(this.stopWords.contains(res) || this.negationWords.contains(res)) {
+      res=""
+    }
     res
   }
 
