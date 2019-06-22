@@ -61,7 +61,7 @@ root
       "group by tmp.FEELING")
     res.printSchema()*/
 
-    val mongoLemmas=sqlContext.sql("select tmp.FEELING as _id, collect_list(struct(tmp.LEMMA,tmp.PERCENTAGE,tmp.FREQUENCY,tmp.lexicalRes)) as lemmas " +
+    val mongoLemmas=sqlContext.sql("select tmp.FEELING as _id, tmp.FEELING as feeling, collect_list(struct(tmp.LEMMA,tmp.PERCENTAGE,tmp.FREQUENCY,tmp.lexicalRes)) as lemmas " +
       "from tmp " +
       "group by tmp.FEELING")
     mongoLemmas.printSchema()
@@ -69,12 +69,12 @@ root
     val mongoLemmas1=mongoLemmas.filter(row=> Array("joy","anger","surprise").contains(row.getString(0)))
     val mongoLemmas2=mongoLemmas.except(mongoLemmas1)
 
-    val mongoEmojis=sqlContext.sql("select EMOJIS.FEELING as _id, collect_list(struct(EMOJIS.SYMBOL, EMOJIS.ALIAS, EMOJIS.HTML_HEX, EMOJIS.COUNT)) as emojis " +
+    val mongoEmojis=sqlContext.sql("select EMOJIS.FEELING as _id, tmp.FEELING as feeling, collect_list(struct(EMOJIS.SYMBOL, EMOJIS.ALIAS, EMOJIS.HTML_HEX, EMOJIS.COUNT)) as emojis " +
       "from EMOJIS " +
       "group by EMOJIS.FEELING")
     mongoEmojis.printSchema()
 
-    val mongoHashtags=sqlContext.sql("select HASHTAGS.FEELING as _id, collect_list(struct(HASHTAGS.LEMMA AS HASHTAG, HASHTAGS.COUNT)) as hashtags " +
+    val mongoHashtags=sqlContext.sql("select HASHTAGS.FEELING as _id, tmp.FEELING as feeling, collect_list(struct(HASHTAGS.LEMMA AS HASHTAG, HASHTAGS.COUNT)) as hashtags " +
       "from HASHTAGS " +
       "group by HASHTAGS.FEELING")
     mongoHashtags.printSchema()

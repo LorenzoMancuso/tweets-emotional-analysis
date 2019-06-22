@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional"
-		date="20190621192329"/>
+		date="20190622135022"/>
 	<dependencies>
 		<module organisation="org.jetbrains" name="sbt-idea-compiler-indices">
 			<revision name="0.1.2" status="release" pubdate="20190313204823" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="84">
